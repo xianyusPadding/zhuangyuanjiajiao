@@ -1,0 +1,133 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+.banner{
+	background-color: #11bb03;
+	width: 1000px;
+	height: 30px;
+	color: white;
+	border-radius:2px ;
+	padding-left:10px ;
+	line-height: 30px;
+	font-size:15px ;
+}
+#center{
+	width: 1000px;
+	height: 800px;
+	margin: 0 auto;
+	margin-top: 55px;
+}
+.l_center
+{
+	width: 250px;
+	height: 500px;
+	border: 1px solid #BADAA1;
+	margin-top: 10px;
+background-color: lightyellow;
+}
+.reg_left h3 {
+background: url(../img/fe_reg_left.gif) no-repeat;
+width: 164px;
+height: 37px;
+color: #FFF;
+font-weight: bold;
+color: #FFF;
+line-height: 29px;
+text-indent: 20px;
+font-size: 14px;
+margin-left: -10px;
+}
+h3 {
+display: block;
+font-size: 1.17em;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+li {
+text-align: -webkit-match-parent;
+color: #666;
+width: 248px;
+}
+ul {
+list-style: none;
+}
+body{
+font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+}
+p {
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+.reg_left p {
+padding-left: 55px;
+line-height: 21px;
+}
+.reg_left p.i1 {
+background: url(../img/reg_1.gif) no-repeat 15px center;
+}
+.reg_left p.i2 {
+background: url(../img/reg_2.gif) no-repeat 15px center;
+}
+.reg_left p.i3 {
+background: url(../img/reg_3.gif) no-repeat 15px center;
+}
+.reg_left p.i4 {
+background: url(../img/reg_4.gif) no-repeat 15px center;
+}
+.r_center{
+	width: 700px;
+	height: 800px;
+	border: 1px solid #BADAA1;
+	float: right;
+	margin-top: -500px;
+}
+#jiangjin_4{display: inline-block;}
+.elem_form li{
+	width: 700px;
+	height: 54px;
+	margin-left: 20px;
+}
+.elem_form .grades{
+	display: inline-block;
+	width: 100px;
+}
+.elem_form .float1{
+	width: 700px;
+}
+.elem_form .float2{
+	display: inline-block;
+	width: 200px;
+}
+/*li{
+list-style-type: none;
+margin-left: 20px;
+height: 50px;
+}*/
+.r_center1{
+	height: 500px;
+	width: 700px;
+	border: 1px solid #BADAA1;
+	float: right;
+	margin-top: -500px;
+}
+.button{
+	text-decoration: none;
+	display: inline-block;
+	width: 50px;
+	margin-left: 80%;
+	margin-bottom: 10px;
+	background-color: #BADAA1;
+	color: white;
+	padding: 8px;
+	text-align: center;
+}
+.button:hover{
+	background-color: #11BB03;
+}

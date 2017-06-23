@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="UTF-8">
+		<title></title>
+	</head>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/font-awesome.css" />
+	<link rel="stylesheet" href="css/react.css" />
+	<link rel="stylesheet" href="css/jiajiao.css" />
+	<link rel="stylesheet" href="css/base.css" />
+	<body>
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+							</div>
+						</span>
+						<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+						<span class="register"><a href="regist.html">注册</a></span>
+						<span class="login_in"><a href="login.html">登录</a></span>
+					</div>
+				</div>
+				<div class="row navbar-main">
+					<ul class="col-xs-9 list-inline">
+						<li class="active"><a href="index.html">首页</a></li>
+						<li><a href="teacher.html">教师库</a></li>
+						<li><a href="student.html">学员库</a></li>
+						<li><a href="price.html">资费说明</a></li>
+						<li><a href="personal.html">个人中心</a></li>
+					</ul>
+					<div class="col-xs-3">
+						<div class="search input-group">
+							<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+							<input type="text" class="form-control" />
+							<span class="input-group-addon icon-search"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="area_modal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5>切换城市</h5>
+							</div>
+							<div class="modal-body">
+								<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+							        <option value="">省</option> 
+							    </select> 
+							    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+							        <option value="">市</option> 
+							    </select> 
+							    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+							</div>
+							<div class="modal-footer">
+								 <button class="btn btn-default area_submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="center" style="height: 550px;">
+			<div class="banner">我要请家教</div>
+			<div class="l_center">
+				<div class="reg_left">
+					<ul>
+						<li>
+							<h3>最专业的家教网站</h3>
+							<p class="i1">
+								超过60000名家教和
+								<br> 30000名家长注册
+							</p>
+						</li>
+						<li>
+							<h3>权威可依赖</h3>
+							<p class="i2">
+								完善的认证系统、积分体系，
+								<br> 充分展示家教的各项信息
+
+							</p>
+						</li>
+						<li>
+							<h3>安全的信息保障</h3>
+							<p class="i3">
+								您的手机号等联系方式
+								<br> 不会被无关的人获取
+
+							</p>
+						</li>
+						<li>
+							<h3>免费的优质服务</h3>
+							<p class="i4">
+								请家教完全免费
+								<br> 客服跟进您的问题
+							</p>
+						</li>
+					</ul>
+				</div>
+			</div>
+			<div class="r_center1">
+				<div style="font-weight: bold;color: #ff9933;padding: 20px 20px 5px 20px;">发布招聘信息</div>
+				<div style="width:660px;height: 30px;background-color: #E3E3E3;color: grey;margin-left: 20px;">请补充一下信息，可便于状元为您推荐合适的家教,还可以获得积分奖励</div>
+				<form class="FormInline" id="form_studentmore" name="form_studentmore" method="post" enctype="multipart/form-data" onsubmit="return addinfo1();">
+					<table width="660" align="center" border="0" cellpadding="0" cellspacing="5" style="font-size:14px;">
+						<tbody>
+							<tr>
+								<td height="30" colspan="3" align="left" style="text-indent: 2em;"><b style="color:#000000;"> 补充学员信息：（让老师更方便了解学员、因材施教）</b></td>
+							</tr>
+							<tr>
+								<td width="16%" height="35" align="right">
+									<label for="school">所在学校&nbsp;</label> ：</td>
+								<td height="30" colspan="2" align="left">
+									<input type="text" id="studentmoreschool" name="school" maxlength="20" class="input_1"> <span class="tips"></span> <span class="error" style="visiablity:true"></span> </td>
+							</tr>
+							<tr>
+								<td width="16%" height="35" align="right">
+									<label for="school_year">入学年份&nbsp;</label> ：</td>
+								<td height="30" colspan="2" align="left">
+									<select id="studentmoreschool_year" name="school_year">
+										<option value="" selected="selected"></option>
+										<option value="2000">2000</option>
+										<option value="2001">2001</option>
+										<option value="2002">2002</option>
+										<option value="2003">2003</option>
+										<option value="2004">2004</option>
+										<option value="2005">2005</option>
+										<option value="2006">2006</option>
+										<option value="2007">2007</option>
+										<option value="2008">2008</option>
+										<option value="2009">2009</option>
+										<option value="2010">2010</option>
+										<option value="2011">2011</option>
+										<option value="2012">2012</option>
+										<option value="2013">2013</option>
+									</select>
+									<span class="tips"></span> <span class="error" style="visiablity:true"></span> </td>
+							</tr>
+							<tr>
+								<td width="16%" height="35" align="right">
+									<label for="grade"><font color="red">  *  </font>所在年级&nbsp;</label> ：</td>
+								<td height="30" colspan="2" align="left">
+									<select id="studentmoregrade" name="grade" is_must="1">
+										<option value="">请选择</option>
+										<option value="学前阶段">学前阶段</option>
+										<option value="小学一年级" selected="selected">小学一年级</option>
+										<option value="小学二年级">小学二年级</option>
+										<option value="小学三年级">小学三年级</option>
+										<option value="小学四年级">小学四年级</option>
+										<option value="小学五年级">小学五年级</option>
+										<option value="小学六年级">小学六年级</option>
+										<option value="初中一年级">初中一年级</option>
+										<option value="初中二年级">初中二年级</option>
+										<option value="初中三年级">初中三年级</option>
+										<option value="高中一年级">高中一年级</option>
+										<option value="高中二年级">高中二年级</option>
+										<option value="高中三年级">高中三年级</option>
+										<option value="大学">大学</option>
+										<option value="已工作">已工作</option>
+									</select>
+									<span class="tips"></span> <span class="error" style="visiablity:true"></span> </td>
+							</tr>
+							<tr id="subject_td">
+								<td width="16%" height="35" align="right">
+									<font color="red">* </font>科目成绩 ：</td>
+								<td width="78%" height="30" align="left">
+									<span>
+					初中文综
+:
+					<select name="subcj14">
+					<option value="">请选择</option>
+										<option value="60分以下">60分以下</option>
+				    <option value="70分左右">70分左右</option>
+				    <option value="80分左右">80分左右</option>
+				    <option value="90分左右">90分左右</option>
+				    <option value="100分左右">100分左右</option>
+				    <option value="110分左右">110分左右</option>
+				    <option value="120分左右">120分左右</option>
+				    <option value="130分左右">130分左右</option>
+				    <option value="140分左右">140分左右</option>										</select>
+					</span>
+								</td>
+								<td width="6%" height="30" align="left">&nbsp;</td>
+							</tr>
+							<tr>
+								<td width="16%" height="35" align="right">
+									<label for="character_id">学生特点&nbsp;</label> ：</td>
+								<td height="30" colspan="2" align="left">
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_1">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_1" value="1">学科培优</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_2">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_2" value="2">学科补差</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_3">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_3" value="3">考前冲刺</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_4">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_4" value="4">粗心马虎</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_5">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_5" value="5">信心不足</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_6">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_6" value="6">缺乏思路</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_7">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_7" value="7">贪玩厌学</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_8">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_8" value="8">机械记忆</label>
+									<label id="studentmorecharacter_id_label" for="studentmorecharacter_id_9">
+										<input type="checkbox" name="studentmorecharacter_id[]" id="studentmorecharacter_id_9" value="9">基础薄弱</label> <span class="tips"></span> <span class="error" style="visiablity:true"></span> </td>
+							</tr>
+
+							<tr>
+								<td height="35" align="center">&nbsp;</td>
+								<td height="30" class="elem_form">
+									<input type="hidden" value="228196" name="info_id">
+
+									<div style="float:left">
+										<a class="button" href="#" style="width: 200px;margin-top: 70px;">提交</a>
+									</div>
+									&nbsp;</td>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="35" align="center">&nbsp;</td>
+								<td height="30">&nbsp;</td>
+								<td height="30"></td>
+							</tr>
+							<tr>
+								<td height="35" align="center">&nbsp;</td>
+								<td height="30">&nbsp;</td>
+								<td height="30"></td>
+							</tr>
+						</tbody>
+					</table>
+				</form>
+			</div>
+		</div>
+		<div id="share">
+			<div class="left">
+				<div class="weixin"></div>
+				<div class="tengxun"></div>
+				<div class="xinlang"></div>
+			</div>
+			<div class="right"></div>
+		</div>
+		
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
+	</body>
+
+</html>

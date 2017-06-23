@@ -1,0 +1,105 @@
+		body{
+			padding: 0;
+			margin: 0;
+		}
+		#shopCar .student_list{
+			margin: 0 auto;
+			width: 1000px;
+			background-color: #11BB30;
+			margin-top: 50px;
+		}
+		.student_list h4{
+			margin-left: 5%;
+			color: white;
+			padding: 8px;
+		}
+		#shopCar table{
+			margin: 0 auto;
+			width: 1000px;
+			margin-top: 30px;
+			border-collapse: collapse;/*将边框在重复度去掉*/
+		}
+		#shopCar table{
+			height: 100px;
+		}
+		#shopCar table tr{
+			height: 35px;
+		}
+		 #shopCar table td{
+		 	width: 220px;
+		 	height: 40px;
+		 	text-align: center;
+		 }
+		 .count{
+		 	width:1000px;
+		 	margin: 0 auto;
+		 	height: 50px;
+		 	line-height: 45px;
+		 	background-color:gainsboro;
+		 	position: relative;
+		 }
+		.list{
+			background-color: #F0FFF0;
+			border: 1px solid gainsboro;
+		}
+		.list img{
+			width: 80px;
+			height: 80px;
+			border-radius: 40px;
+			margin-top: 10px;
+		}
+		.list .chaoliagnjie{
+		    font-size: 12px;
+		    display: block;
+		    max-height: 36px;
+		    overflow: hidden;
+		    text-overflow: ellipsis;
+		    margin-bottom: 10px;
+		}
+
+		.list button{
+			width: 20px;
+			height: 27px;
+		}
+		.count input{
+			margin-left: 5%;
+		}
+		.count a{
+			margin-left: 8%;
+		}
+		.yixuan{
+			position: absolute;
+			left: 392px;
+		}
+		.heji{
+			position: absolute;
+			right: 218px;
+		}
+		.jiesuan1{
+			width: 120px;
+			height: 50px;
+			background-color: grey;
+			color: white;
+			float: right;
+			border-radius: 3px;
+			cursor: not-allowed;
+		}
+		.jiesuan2{
+			width: 120px;
+			height: 50px;
+			background-color: #11BB30;
+			color: white;
+			float: right;
+			border-radius: 3px;
+		}
+		a{
+			text-decoration: none;
+			color: black;
+		}
+		a:hover{
+			text-decoration: underline;
+			color: #11BB30;
+		}
+		.chengse,.num,.money{
+			font-size: 18px;
+			color: green;

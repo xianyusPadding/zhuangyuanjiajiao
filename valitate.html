@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html >
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<title>发送验证码倒计时功能</title>
+<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+<link rel="stylesheet" href="css/bootstrap.css" />
+<style>
+@charset "utf-8";
+*{ margin:0; padding:0; list-style:none}
+body{ background:#EBECED; font-family:'微软雅黑'}
+.form{width: 450px;height: auto; margin:100px auto; overflow:hidden;font-size: 16px;color: #1b1b1b;text-align: left; padding:50px; border:1px solid #ccc; border-radius:10px;}
+.form div{padding:5px 0;overflow: hidden;}
+.form label{width: 90px;display: block;float: left;}
+.form .infos{width:200px;height: 26px;line-height: 26px;border:1px solid #BFBFBF;padding:2px;border-radius:4px;float: left;}
+.form .div-phone a.send1{height: 26px;text-decoration:none;line-height: 26px;padding:2px;width: 80px;background: #AA8926;font-family: '宋体';color: #fff;font-size: 12px;text-align: center;display: block;float: left;border-radius:2px;margin-left:2px;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-ms-transition:all 0.2s linear;-o-transition:all 0.2s linear;transition:all 0.2s linear;}
+.form .div-phone a.send1:hover{text-decoration: none;background: #866c1b;-webkit-transition:all 0.2s linear;-moz-transition:all 0.2s linear;-ms-transition:all 0.2s linear;-o-transition:all 0.2s linear;transition:all 0.2s linear;}
+.form .div-phone a.send0{height: 26px;text-decoration:none;line-height: 26px;padding:2px;width: 80px;background: #A1A1A1;font-family: '宋体';color: #fff;font-size: 12px;text-align: center;display: block;float: left;border-radius:2px;margin-left:2px;}
+.form .div-phone a.send0:hover{background: #A1A1A1;font-family: '宋体';color: #fff;font-size: 12px;text-decoration: none;}
+.form span.error{height: 26px;line-height: 26px;padding:2px;width: 100px;color: red;padding-left:20px;display: block;float: left;margin-left:10px;font-size: 12px;font-family: '宋体';background: url(../images/error.png) no-repeat left center;}
+.form #phone{width: 116px;}
+.form .div-conform{padding-right:153px;}
+.form .div-conform a.conform{width: 136px;height: 34px;display: block;text-align: left;overflow: hidden;float: right;text-indent: -1000px;}
+
+
+.logo img{
+	margin: 100px;
+	width: 50px;
+	height: 50px;
+	border: 1px solid black;
+	border-radius:50px ;
+}
+
+</style>
+<link rel="stylesheet" href="css/base.css" />
+</head>
+<body>
+<div id="header">
+	<div class="container">
+		<div class="row">
+			<div class="navbar-header">
+				<span class="logo">
+					<img src="images/logo1.png" style="margin:0" alt="" />
+					<div class="title">
+						<h1>状元家教</h1>
+						<span>ZYJJ.COM</span>
+					</div>
+				</span>
+				<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+				<span class="register"><a href="regist.html">注册</a></span>
+				<span class="login_in"><a href="login.html">登录</a></span>
+			</div>
+		</div>
+		<div class="row navbar-main">
+			<ul class="col-xs-9 list-inline">
+				<li><a href="index.html">首页</a></li>
+				<li><a href="#">教师库</a></li>
+				<li><a href="#">学员库</a></li>
+				<li class="active"><a href="price.html">资费说明</a></li>
+				<li><a href="personal.html">个人中心</a></li>
+			</ul>
+			<div class="col-xs-3">
+				<div class="search input-group">
+					<span class="input-group-addon fl-padding">
+						<select name="" class="search_select">
+							<option value="">家教</option>
+							<option value="">家长</option>
+						</select>
+					</span>
+					<input type="text" class="form-control" />
+					<span class="input-group-addon icon-search"></span>
+				</div>
+			</div>
+		</div>
+		<div class="modal" id="area_modal">
+			<div class="modal-dialog">
+				<div class="modal-content">
+					<div class="modal-header">
+						<h5>切换城市</h5>
+					</div>
+					<div class="modal-body">
+						<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+					        <option value="">省</option> 
+					    </select> 
+					    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+					        <option value="">市</option> 
+					    </select> 
+					    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+					        <option value="">县</option>
+					    </select>-->
+					</div>
+					<div class="modal-footer">
+						 <button class="btn btn-default area_submitBtn">确定</button>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+</div>
+
+<div class="form">
+
+
+
+ <div class="div-phone">
+	 <label for="phone">手机</label>
+	 <input type="text" id="phone" class="infos" placeholder="请输入手机" />
+	 <a href="javascript:;"  rel="external nofollow" class="send1" onclick="sends.send();">发送验证码</a>
+ </div>
+ 
+ <div class="div-ranks">
+      <label for="ranks">验证码</label><input type="text" id="ranks" class="infos" placeholder="请输入验证码" />
+ </div>
+ 
+ 
+ 
+ 
+ <div class="div-conform">
+     <a href="javascript:;"  rel="external nofollow" class="conform" onclick="sends.conform();">提交</a>
+ </div>
+</div>
+<div id="share">
+	<div class="left">
+		<div class="weixin"></div>
+		<div class="tengxun"></div>
+		<div class="xinlang"></div>
+	</div>
+	<div class="right"></div>
+</div>
+
+<div id="footer">
+	<div class="container text-muted">
+		<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+		<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+	</div>
+</div>
+<!--<script src="http://www.lanrenzhijia.com/ajaxjs/jquery.min.js"></script>-->
+<script>
+var sends = {
+ checked:1,
+ send:function(){
+  var numbers = /^1\d{10}$/;
+  var val = $('#phone').val().replace(/\s+/g,""); //获取输入手机号码
+  if($('.div-phone').find('span').length == 0 && $('.div-phone a').attr('class') == 'send1'){
+  if(!numbers.test(val) || val.length ==0){
+   $('.div-phone').append('<span class="error">手机格式错误</span>');
+   return false;
+  }
+  }
+  if(numbers.test(val)){
+  var time = 30;
+  $('.div-phone span').remove();
+  function timeCountDown(){
+   if(time==0){
+   clearInterval(timer);
+   $('.div-phone a').addClass('send1').removeClass('send0').html("发送验证码");
+   sends.checked = 1;
+   return true;
+   }
+   $('.div-phone a').html(time+"S后再次发送");
+   time--;
+   return false;
+   sends.checked = 0;
+  }
+  $('.div-phone a').addClass('send0').removeClass('send1');
+  timeCountDown();
+  var timer = setInterval(timeCountDown,1000);
+  }
+ }
+}
+</script>
+<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/area.js"></script>
+</body>
+</html>

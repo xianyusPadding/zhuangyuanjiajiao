@@ -1,0 +1,706 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>状元家教</title>
+		<!--<meta name="viewport" content="width=device-width,minimum-scale=1.0,maximum-scale=1.0,user-scalable=no" />-->
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<link rel="stylesheet" href="css/react.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/index.css" />
+	</head>
+	<body>
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+							</div>
+						</span>
+						<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+						<!--<span id="login">-->
+							<span class="register"><a href="login.html">注册</a></span>
+							<span class="login_in"><a href="regist.html">登录</a></span>
+						<!--</span>-->
+					</div>
+				</div>
+				<div class="row navbar-main">
+					<ul class="col-xs-9 list-inline">
+						<li class="active"><a href="#">首页</a></li>
+						<li><a href="teacher.html">教师库</a></li>
+						<li><a href="student.html">学员库</a></li>
+						<li><a href="price.html">资费说明</a></li>
+						<li><a href="personal.html">个人中心</a></li>
+					</ul>
+					<div class="col-xs-3">
+						<div class="search input-group">
+							<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+							<input type="text" class="form-control" />
+							<span class="input-group-addon icon-search"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="area_modal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5>切换城市</h5>
+							</div>
+							<div class="modal-body">
+								<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+							        <option value="">省</option> 
+							    </select> 
+							    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+							        <option value="">市</option> 
+							    </select> 
+							    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+							</div>
+							<div class="modal-footer">
+								 <button class="btn btn-default area_submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="center">
+			<div class="container">
+				<div id="myCarousel" class="carousel slide container" data-ride="carousel">
+					<ol class="carousel-indicators">
+						<li class="active" data-target="#myCarousel" data-slide-to="0"></li>
+						<li data-target="#myCarousel" data-slide-to="1"></li>
+						<li data-target="#myCarousel" data-slide-to="2"></li>
+						<li data-target="#myCarousel" data-slide-to="3"></li>
+						<li data-target="#myCarousel" data-slide-to="4"></li>
+						<!--5个小按钮-->
+					</ol>
+					<div class="carousel-inner">
+						<div class="item active"><img src="images/xuefei.png" alt="" /></div>
+						<div class="item"><img src="images/minghao.png" alt="" /></div>
+						<div class="item"><img src="images/jiemin.png" alt="" /></div>
+						<div class="item"><img src="images/feilong.png" alt="" /></div>
+						<div class="item"><img src="images/guanfu.png" alt="" /></div>
+					</div>
+					<a href="#myCarousel" data-slide="prev" class="left">
+						<span class="icon-chevron-left icon_left"></span>
+					</a>
+					<a href="#myCarousel" data-slide="next" class="right">
+						<span class="icon-chevron-right icon_right"></span>
+					</a>
+				</div>
+				<div class="teacher_search">
+					<h4 class="title">家教速查</h4>
+					<select class="select_group form-control"> 
+				        <option value="">选择年级</option> 
+				    </select> 
+				    <select class="select_subject form-control"> 
+				        <option value="">选择学科</option> 
+				    </select> 
+					<select name="" class="form-control">
+						<option value="">家教身份</option>
+						<option value="">大学生家教</option>
+						<option value="">教育机构教师</option>
+						<option value="">在职教师</option>
+						<option value="">专职家教</option>
+						<option value="">辅导机构</option>
+					</select>
+					
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-8">
+						<h2 class="case_title"><span>成功案例</span><a href="#" class="more" style="float:right"> /更多</a></h2>
+						
+						<div class="case_left">
+							<img class="" src="images/case_detail1.jpg" alt="" />
+							<dl>
+								<dt>莫等闲教育辅导周同学高中数学</dt>
+								<dd>数学思维能力</dd>
+								<dd>辅导学生：周同学</dd>
+								<dd>辅导时间： 2016-10-06</dd>
+								<dd>学生学校：石油附中</dd>
+								<dd>学生特点： 学科补差.信心不足.缺乏思路.</dd>
+							</dl>
+						</div>
+						<div class="case_right">
+							<p><span class="icon_big">“</span>将同类型题目归纳整理，培养学生举一反三能力，让学生对知识点有个透彻的理...—— 案例内容 <span class="icon_big">”</span></p>
+							<button class="btn btn-success contact_btn">联系我们</button>
+						</div>
+					</div>
+					<div class="col-xs-4">
+						<ul class="list-inline notice_navbar nav nav-tabs" id="notice_tabs">
+							<li class="active"><a href="#tab1" class="notice_link">公告</a></li>
+							<li><a href="#tab2" class="notice_link">帮助</a></li>
+						</ul>
+						<div class="tab-content notice_content">
+						<div id="tab1" class="tab-pane active fade in">
+							<ul>
+								<li>状元家教业务模式介绍热 <span class="time">6-9</span></li>
+								<li>家教价格参考热<span class="time">6-9</span></li>
+								<li>搜狐网报道状元家教<span class="time">6-8</span></li>
+								<li>新浪网报道状元家教<span class="time">6-8</span></li>
+								<li>新华网报道状元家教<span class="time">6-7</span></li>
+								<li>凤凰网报道状元家教<span class="time">6-6</span></li>
+							</ul>
+						</div>
+						<div id="tab2" class="tab-pane fade	">
+							<ul>
+								<li>常见使用问题热<span class="time">5-19</span></li>
+								<li>家教使用帮助热<span class="time">5-19</span></li>
+								<li>家长使用帮助新<span class="time">5-18</span></li>
+								<li>家长如何挑选家教<span class="time">5-18</span></li>
+								<li>这找家教花钱吗？<span class="time">5-17</span></li>
+								<li>确保是在职老师？<span class="time">5-16</span></li>
+							</ul>
+						</div>
+						</div>
+					</div>
+				</div>
+				
+				<div class="row">
+					<div class="col-xs-8 invite">
+						<h2 class="invite_title"><span>招聘家教</span><a href="#" class="more" style="float:right"> /更多</a></h2>
+						<div class="item">
+							<div class="header">
+								<h4>杨女士继续家教</h4>
+								<span class="content">辅导高中化学</span>
+							</div>
+							<div class="center" style="background: #11BB30;">
+								<span>200</br>元/小时</span>
+							</div>
+							<div class="footer">
+								<p class="icon-map-marker"> 湛江赤坎跃进路...</p>
+								<p class="icon-user"> 等待你的应聘</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="header">
+								<h4>杨女士继续家教</h4>
+								<span class="content">辅导高中化学</span>
+							</div>
+							<div class="center" style="background: #CA3A48;">
+								<span>面议</span>
+							</div>
+							<div class="footer">
+								<p class="icon-map-marker"> 湛江赤坎跃进路...</p>
+								<p class="icon-user"> 等待你的应聘</p>
+							</div>
+						</div>
+						<div class="item">
+							<div class="header">
+								<h4>杨女士继续家教</h4>
+								<span class="content">辅导高中化学</span>
+							</div>
+							<div class="center" style="background: #38C3CA;">
+								<span>面议</span>
+							</div>
+							<div class="footer">
+								<p class="icon-map-marker"> 湛江赤坎跃进路...</p>
+								<p class="icon-user"> 等待你的应聘</p>
+							</div>
+						</div>
+					</div>
+					<div class="col-xs-4 new_invite">
+						<dl>
+							<dt>最新的招聘信息</dt>
+							<dd>魏先生发布了招聘信息<span class="time">1小时前</span></dd>
+							<dd>杨女士发布了招聘信息<span class="time">1小时前</span></dd>
+							<dd>赵先生发布了招聘信息<span class="time">1小时前</span></dd>
+							<dd>安先生发布了招聘信息<span class="time">1小时前</span></dd>
+							<dd>杨先生发布了招聘信息<span class="time">2小时前</span></dd>
+							<dd>董女士发布了招聘信息<span class="time">2小时前</span></dd>
+							<dd>刘发布了招聘信息<span class="time">2小时前</span></dd>
+						</dl>
+						<button class="btn btn-success new_invite_btn"><a href="post_teacher_msg.html">发布招聘信息</a></button>
+					</div>
+				</div>
+				
+				<div class="row home_teachers">
+					<h2 class="teachers_title">认证家教</h2>
+					<ul class="list-inline teachers_navbar nav nav-tabs" id="teachers">
+						<li class="active"><a href="#math">数学家教</a></li>
+						<li><a href="#chinese">语文家教</a></li>
+						<li><a href="#english">英语家教</a></li>
+						<li><a href="#physice">物理家教</a></li>
+						<li><a href="#chemistry">化学家教</a></li>
+						<li><a href="#biology">生物家教</a></li>
+						<li><a href="#others">其他家教</a></li>
+					</ul>
+					<div class="tab-content">
+						<div class="tab-pane active fade in" id="math">
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+									
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="chinese">
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="english">
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="physice">
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="chemistry">
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/head2.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="biology">
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="tab-pane fade" id="others">
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+							<div class="col-xs-6">
+								<div class="default_head col-xs-3">
+									<img src="images/teacher.jpg" alt="" />
+								</div>
+								<div class="teacher_details col-xs-9">
+									<h5 class="name">豆腐老师</h5>
+									<p class="style">大学生家教</p>
+									<p class="intro"><span>个人简介：</span>本人本科就读于山东，在本科期间，...</p>
+									<p class="price"><span>课时费：</span>80</p>
+									<button class="btn btn-success content_btn"><a href="teacherIndex.html">联系该家教</a></button>
+									<div class="triangle">
+										<img src="images/teacher_level.ico" alt="" />
+									</div>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+			
+			<div id="share">
+				<div class="left">
+					<div class="weixin"></div>
+					<div class="tengxun"></div>
+					<div class="xinlang"></div>
+				</div>
+				<div class="right"></div>
+			</div>
+			
+		</div>
+		
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/index.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
+		
+	</body>
+</html>

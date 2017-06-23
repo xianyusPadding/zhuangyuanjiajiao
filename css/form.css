@@ -1,0 +1,30 @@
+.elem_form {
+color: #333;
+padding-top: 30px;
+}
+ul {
+display: block;
+list-style-type: disc;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+-webkit-padding-start: 40px;
+}
+.elem_form li {
+padding-top: 10px;
+padding-bottom: 10px;
+font-size: 14px;
+overflow: hidden;
+}
+.float1 {
+clear: both;
+float: left;
+}
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+.elem_form .label_like {
+width: 105px;
+}

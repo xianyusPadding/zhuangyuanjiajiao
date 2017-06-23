@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>资费说明</title>
+	</head>
+	<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+	<link rel="stylesheet" href="css/bootstrap.css" />
+	<link rel="stylesheet" href="css/price.css" />
+	<link rel="stylesheet" href="css/base.css" />
+	
+	<body>
+		
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+							</div>
+						</span>
+						<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+						<span class="register"><a href="regist.html">注册</a></span>
+						<span class="login_in"><a href="login.html">登录</a></span>
+					</div>
+				</div>
+				<div class="row navbar-main">
+					<ul class="col-xs-9 list-inline">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="teacher.html">教师库</a></li>
+						<li><a href="student.html">学员库</a></li>
+						<li class="active"><a href="price.html">资费说明</a></li>
+						<li><a href="personal.html">个人中心</a></li>
+					</ul>
+					<div class="col-xs-3">
+						<div class="search input-group">
+							<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+							<input type="text" class="form-control" />
+							<span class="input-group-addon icon-search"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="area_modal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5>切换城市</h5>
+							</div>
+							<div class="modal-body">
+								<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+							        <option value="">省</option> 
+							    </select> 
+							    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+							        <option value="">市</option> 
+							    </select> 
+							    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+							</div>
+							<div class="modal-footer">
+								 <button class="btn btn-default area_submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="price">
+		<div id="center">
+			<div class="c_top">
+				<h4>家教价格</h4>
+				<p>你需要支付的费用由两部分组成：</p>
+				<p>1)支付给本网的“会员服务费”。</p>
+				<p>2)支付教员的授课报酬。</p>
+				<p>你的会员服务费由初次上门的教员代收。</p>
+				<span>单位： 元/小时</span>
+			</div>
+			<table>
+				<tbody>
+					<tr>
+						<th></th>
+						<th>幼教、小学</th>
+						<th>初中</th>
+						<th>高中</th>
+						<th>英语</th>
+						<th>美术</th>
+						<th>舞蹈</th>
+						<th>音乐</th>
+						<th>体育</th>
+					</tr>
+					<tr>
+						<th>在校大学生</th>
+						<td>40-60</td>
+						<td>40-80</td>
+						<td>50-100</td>
+						<td>50-100</td>
+						<td>80-180</td>
+						<td>60-120</td>
+						<td>60-120</td>
+						<td>50-100</td>
+					</tr>
+					<tr>
+						<th>专职老师</th>
+						<td>40-60</td>
+						<td>40-80</td>
+						<td>50-100</td>
+						<td>50-100</td>
+						<td>80-180</td>
+						<td>60-120</td>
+						<td>60-120</td>
+						<td>50-100</td>	
+					</tr>
+					<tr>
+						<th>签约老师</th>
+						<td>40-60</td>
+						<td>40-80</td>
+						<td>50-100</td>
+						<td>50-100</td>
+						<td>80-180</td>
+						<td>60-120</td>
+						<td>60-120</td>
+						<td>50-100</td>	
+					</tr>
+						<tr>
+						<th>其他专业人员</th>
+						<td>40-60</td>
+						<td>40-80</td>
+						<td>50-100</td>
+						<td>50-100</td>
+						<td>80-180</td>
+						<td>60-120</td>
+						<td>60-120</td>
+						<td>50-100</td>	
+					</tr>
+				</tbody>
+			</table>
+			<div class="c_foot_top">
+				<p>
+					Ps: 辅导才艺课程（音、体、美、舞）且专业对口的大学生家教，以及指导竞赛类 课程的大学生家教，其收费标准和专职老师的收费标准一致哦~
+				</p>
+			</div>
+			<div class="c_foot_center">
+				<p>
+					如果您对以下资费标准有任何疑问，欢迎拨打热线：021-61300114。<br>
+                                        会员服务费收费标准：状元家教收取会员费100元，一年内免费聘用和更换教员执教课程。
+				</p>
+			</div>
+			<div class="c_foot_foot">
+				<p>
+					状元家教一般情况下只提供名校师资，并从上海站90,000名教员中择优为您服务，一般两天内联系到合适教员。<br>
+                                        在教员前去执教前，状元家教会对教员进行实际严格认证，确保教员信息真实可靠。<br>
+                                        同时状元家教对教员所做的每一份家教都有详细记录，供家长/学员选择教员时参考。<br>
+                                        若家长/学生对派遣的教员不满意可暂时不缴纳会员费，直到挑选到满意的教员为止。
+				</p>
+			</div>
+		</div>
+		<div id="footer">
+			<form action="#" method="post">
+				<h4>填写简单信息，快速预约老师还是上门</h4>
+				<label for>
+					姓名：                                                   
+					<input type="text" name="contact" maxlength="10"/>
+				</label>
+					<label for>
+					联系电话：                                                   
+					<input type="text" name="mobile" maxlength="11"/>
+				</label>
+					<label for>
+					科目：                                                   
+					<input type="text" name="kemu" maxlength="11"/>
+				</label>
+				<button type="submit" onclick="#">免费预约</button>
+			</form>
+		</div>
+		</div>
+		<div id="share">
+			<div class="left">
+				<div class="weixin"></div>
+				<div class="tengxun"></div>
+				<div class="xinlang"></div>
+			</div>
+			<div class="right"></div>
+		</div>
+		
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
+	</body>
+</html>

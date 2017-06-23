@@ -1,0 +1,407 @@
+	<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>查看家教</title>
+		<style>
+
+			*{
+				margin: 0;
+				padding: 0;
+				font-family: "微软雅黑";
+			}
+			#view_teacher{
+				width: 800px;
+				margin: -1257px 293px;
+				margin-left: 200px;
+				margin-top: -1362px;
+				border: 1px solid #badaa1;
+			}
+			#view_teacher h3,#view_teacher h6,#view_teacher .teacher_list{
+				padding-left: 10px;
+			}
+			#view_teacher h3{
+				font-size: 15px;
+				height: 35px;
+				line-height: 35px;
+				background-color: #fafff8;
+				border-bottom: 1px solid #badaa1;
+			}
+			#view_teacher hr{
+				margin-top: 25px;
+				margin-left: 10px;
+				margin-right: 10px;
+				border-top: 1px dashed #badaa1;
+			}
+			#view_teacher h6{
+				height: 35px;
+				line-height: 35px;
+				color: #bf0000;
+			}
+			#view_teacher .teacher_list{
+				height: 150px;
+				border: 1px solid #00cc66;
+				margin: 10px;
+				position: relative;
+			}
+			.teacher_list .left img{
+				width: 100px;
+				height: 100px;
+				padding-top: 2%;
+			}
+			.teacher_list .left input{
+				display: block;
+			}
+			.teacher_list .right *{
+				font-size: 13px;
+			}
+			.teacher_list .right{
+				position: absolute;
+				top: 10px;
+				left: 20%;
+			}
+			.teacher_list .right div div{
+				margin-left: 50%;
+				margin-bottom : 30px;
+			}
+			.teacher_list .bold{
+				font-weight: bold;
+			}
+			.teacher_list .right a{
+				text-decoration: none;
+				color: #2c7ac3;
+			}
+			.page_div{
+				margin: 0 auto;
+				text-align: center;
+				width: 26px;
+				margin-bottom: 10px;
+				border: 1px solid #e3e4e8;
+			}
+			.page_div .page{
+				text-decoration: none;
+				font-size: 12px;
+				color: #11BB30;
+			}
+		</style>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/personal.css" />
+	</head>
+	<body>
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title" style="border: none;">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+							</div>
+						</span>
+						<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+						<span class="register"><a href="regist.html">注册</a></span>
+						<span class="login_in"><a href="login.html">登录</a></span>
+					</div>
+				</div>
+				<div class="row navbar-main">
+					<ul class="col-xs-9 list-inline">
+						<li class="active"><a href="index.html">首页</a></li>
+						<li><a href="teacher.html">教师库</a></li>
+						<li><a href="student.html">学员库</a></li>
+						<li><a href="price.html">资费说明</a></li>
+						<li><a href="personal.html">个人中心</a></li>
+					</ul>
+					<div class="col-xs-3">
+						<div class="search input-group">
+							<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+							<input type="text" class="form-control" />
+							<span class="input-group-addon icon-search"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="area_modal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5>切换城市</h5>
+							</div>
+							<div class="modal-body">
+								<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+							        <option value="">省</option> 
+							    </select> 
+							    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+							        <option value="">市</option> 
+							    </select> 
+							    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+							</div>
+							<div class="modal-footer">
+								 <button class="btn btn-default area_submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="center">
+			<div class="l_center">
+			<div class="sider_top">
+				<div class="title">
+					<h2 class="t_t">我的家教网导航</h2>
+				</div>
+				<div class="t_detail">
+					<ul class="user_m_t">
+						<li><a href="#">成为付费会员</a><span style="color: red;;font-size: 10px;display: inline;">&nbsp;&nbsp;&nbsp;new!</span></li>
+						<li><a href="#">邀请好友</a></li>
+						<li><a href="#">修改密码</a></li>
+						<li><a href="#">修改手机</a></li>
+						<li><a href="#">在线咨询</a></li>
+						<li><a href="#">购买积分</a></li>
+						<li><a href="#">设置手机是否公开</a></li>
+						<li><a href="#">我的订单</a></li>
+						<li><a href="#">我的钱包</a></li>
+						<li><a href="#">提醒您找家教防诈骗</a></li>
+					</ul>
+				</div>
+			</div>
+			<div class="sider_main">
+				<div class="box1">
+					<div class="title">
+						<h2 class="t_t">我的找家教情况</h2>
+					</div>
+					<div class="drtail">
+						<ul class="user_m_t">
+							<li><a href="#">发布找家教信息</a></li>
+							<li><a href="#">我查看的家教</a></li>
+							<li><a href="#">我收藏的家教</a></li>
+							<li><a href="#">发布家教点评</a></li>
+							<li><a href="#">我浏览过的家教</a></li>
+							<li><a href="#">预约我的家教</a></li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div class="sider_bottom">
+				<div class="box1">
+					<div class="title">
+						<h2 class="t_t">我的基本信息</h2>
+					</div>
+					<ul class="user_m_t">
+						<li>ID:168251</li>
+						<li>区&nbsp;&nbsp;域：东城区</li>
+						<li>详细地址：湛江 </li>
+						<li>共发布信息数：1</li>
+						<li>如需修改信息请联系客服</li>
+					</ul>
+				</div>
+			</div>
+			<div class="box1">
+				<div class="title">
+					<h2 class="t_t">小提示</h2>
+				</div>
+				<ul class="user_m_t">
+					<p>家长优先联系已认证及家教</p>
+					<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+					<p>家教经验指数代表成功授课几次</p>
+					<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+					<p>家长可提醒家教上门携带证件</p>
+				<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+					<p>家长可与家教直接商议价格</p>
+					<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+					<p>家长可与家教签订协议</p>
+					<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+					<p>状元家教客服电话均来自湛江，并和您核对ID，如有冒充状元客服电话，请家长注意！</p>
+					<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+				</ul>
+			</div>
+
+		<div class="box1">
+			<div class="title">
+				<h2 class="t_t">教育资源频道</h2>
+			</div>
+			<div clas="detail">
+				<ul class="user_m_t">
+					<li>
+						<div><a style="display: inline;padding-left: 6px;" href="#">我的资源</a>
+							<a href="#" style="color: #666666;display: inline;">上传资料</a>
+						</div>
+					</li>
+					<li>
+						<div><a style="display: inline;padding-left: 6px;" href="#">下载统计</a>
+						</div>
+					</li>
+					<li>
+						<div><a style="display: inline;padding-left: 6px;" href="#">热门资源</a>
+						</div>
+					</li>
+				</ul>
+			</div>
+		</div>
+		</div>
+		<div id="view_teacher">
+			<h3>我查看的家教</h3>
+			<hr />
+			<h6>我查看的家教</h6>
+			<div class="teacher_list">
+				<div class="left">
+					<img src="img/img_6.jpg" />
+					<input type="button" value="确定由他授课"/>
+				</div>
+				<div class="right">
+					<div>
+						<span class="bold">大学生家教</span>  <a href="#">谢老师</a> <span>北京交通大学</span>
+						<p>查看时间：2017-06-09</p>
+						<p>简介：专职教师，家教经验6年，曾经在机构任教，性格开朗，耐心负责，善于激发学生对于学习的兴趣，定期给每位学...</p>
+						<div>
+							<span class="bold">匿名印象短评:</span>
+							<input type="text" />
+							<input type="button" value="我要评价"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="teacher_list">
+				<div class="left">
+					<img src="img/img_6.jpg" />
+					<input type="button" value="确定由他授课"/>
+				</div>
+				<div class="right">
+					<div>
+						<span class="bold">在职教师</span>  <a href="#">刘付老师</a> <span>北京交通大学</span>
+						<p>查看时间：2017-06-09</p>
+						<p>简介：多年从事重点大学微积分教学，熟悉国内外高中及大学的微积分教材与教学，辅导孩子耐心，细致，幽默，帮助孩...</p>
+						<div >
+							<span class="bold">匿名印象短评:</span>
+							<input type="text" />
+							<input type="button" value="我要评价"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="teacher_list">
+				<div class="left">
+					<img src="img/img_6.jpg" />
+					<input type="button" value="确定由他授课"/>
+				</div>
+				<div class="right">
+					<div>
+						<span class="bold">在职教师</span>  <a href="#">梁老师</a> <span>北京交通大学</span>
+						<p>查看时间：2017-06-09</p>
+						<p>简介：首都师范大学毕业，10余年教龄。语言表达能力强。细心、耐心、善于与学生沟通，尊重、理解、引导、鼓励和...</p>
+						<div >
+							<span class="bold">匿名印象短评:</span>
+							<input type="text" />
+							<input type="button" value="我要评价"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="teacher_list">
+				<div class="left">
+					<img src="img/img_6.jpg" />
+					<input type="button" value="确定由他授课"/>
+				</div>
+				<div class="right">
+					<div>
+						<span class="bold">在职教师</span>  <a href="#">梁老师</a> <span>北京交通大学</span>
+						<p>查看时间：2017-06-09</p>
+						<p>简介：首都师范大学毕业，10余年教龄。语言表达能力强。细心、耐心、善于与学生沟通，尊重、理解、引导、鼓励和...</p>
+						<div >
+							<span class="bold">匿名印象短评:</span>
+							<input type="text" />
+							<input type="button" value="我要评价"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="teacher_list">
+				<div class="left">
+					<img src="img/img_6.jpg" />
+					<input type="button" value="确定由他授课"/>
+				</div>
+				<div class="right">
+					<div>
+						<span class="bold">在职教师</span>  <a href="#">梁老师</a> <span>北京交通大学</span>
+						<p>查看时间：2017-06-09</p>
+						<p>简介：首都师范大学毕业，10余年教龄。语言表达能力强。细心、耐心、善于与学生沟通，尊重、理解、引导、鼓励和...</p>
+						<div >
+							<span class="bold">匿名印象短评:</span>
+							<input type="text" />
+							<input type="button" value="我要评价"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="teacher_list">
+				<div class="left">
+					<img src="img/img_6.jpg" />
+					<input type="button" value="确定由他授课"/>
+				</div>
+				<div class="right">
+					<div>
+						<span class="bold">在职教师</span>  <a href="#">梁老师</a> <span>北京交通大学</span>
+						<p>查看时间：2017-06-09</p>
+						<p>简介：首都师范大学毕业，10余年教龄。语言表达能力强。细心、耐心、善于与学生沟通，尊重、理解、引导、鼓励和...</p>
+						<div >
+							<span class="bold">匿名印象短评:</span>
+							<input type="text" />
+							<input type="button" value="我要评价"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="teacher_list">
+				<div class="left">
+					<img src="img/img_6.jpg" />
+					<input type="button" value="确定由他授课"/>
+				</div>
+				<div class="right">
+					<div>
+						<span class="bold">在职教师</span>  <a href="#">梁老师</a> <span>北京交通大学</span>
+						<p>查看时间：2017-06-09</p>
+						<p>简介：首都师范大学毕业，10余年教龄。语言表达能力强。细心、耐心、善于与学生沟通，尊重、理解、引导、鼓励和...</p>
+						<div >
+							<span class="bold">匿名印象短评:</span>
+							<input type="text" />
+							<input type="button" value="我要评价"/>
+						</div>
+					</div>
+				</div>
+			</div>
+			<div class="page_div">
+					<a class="page">1</a>
+			</div>
+		</div>
+		</div>
+		
+		<div id="share">
+			<div class="left">
+				<div class="weixin"></div>
+				<div class="tengxun"></div>
+				<div class="xinlang"></div>
+			</div>
+			<div class="right"></div>
+		</div>
+		
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
+	</body>
+</html>

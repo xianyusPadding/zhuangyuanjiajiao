@@ -1,0 +1,329 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="UTF-8">
+		<title>教员信息</title>
+		<link rel="stylesheet" type="text/css" href="css/font-awesome.css"/>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/react.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/student.css" />
+	</head>
+	<body>
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+							</div>
+						</span>
+						<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+						<span class="register"><a href="regist.html">注册</a></span>
+						<span class="login_in"><a href="login.html">登录</a></span>
+					</div>
+				</div>
+				<div class="row navbar-main">
+					<ul class="col-xs-9 list-inline">
+						<li><a href="index.html">首页</a></li>
+						<li><a href="teacher.html">教师库</a></li>
+						<li class="active"><a href="student.html">学员库</a></li>
+						<li><a href="price.html">资费说明</a></li>
+						<li><a href="personal.html">个人中心</a></li>
+					</ul>
+					<div class="col-xs-3">
+						<div class="search input-group">
+							<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+							<input type="text" class="form-control" />
+							<span class="input-group-addon icon-search"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="area_modal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5>切换城市</h5>
+							</div>
+							<div class="modal-body">
+								<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+							        <option value="">省</option> 
+							    </select> 
+							    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+							        <option value="">市</option> 
+							    </select> 
+							    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+							</div>
+							<div class="modal-footer">
+								 <button class="btn btn-default area_submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="main">
+			<div class="menu">
+				<div class="one">	              
+					<dl>
+						<dt>求教学科： </dt> 
+						<dd><a  href="#">不限&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">数学&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">语文&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">英语&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">物理&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">生物&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">化学&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">地理&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">学前教育&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">小学家教&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">初中家教&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">高中家教&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">外语家教&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">计算机&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">辅导课&nbsp;&nbsp;|</a></dd>
+					    <dd><a  href="#">上级课&nbsp;&nbsp;</a></dd>
+					    <dd><a  href="#">外语家教&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">计算机&nbsp;&nbsp;|</a></dd>
+						<dd><a  href="#">辅导课&nbsp;&nbsp;|</a></dd>
+					    <dd><a  href="#">上级课&nbsp;&nbsp;</a></dd>
+					</dl>
+				</div>
+				<div class="two">
+					<dl>
+						<dt>所在区域：</dt>
+						<dd><a href="#">不限|</a></dd>
+						<dd><a href="#">东城区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">西城区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">南城区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">砖石区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">王者区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">铂金区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">黄金区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">很水区&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">豆腐姐区&nbsp;&nbsp;|</a></dd>
+					</dl>
+				</div>
+				<div class="three">
+					<dl>
+						<dt>性别要求：</dt>
+						<dd><a href="#">不限|</a></dd>
+						<dd><a href="#">男&nbsp;&nbsp;|</a></dd>
+						<dd><a href="#">女&nbsp;&nbsp;|</a></dd>
+					</dl>
+				</div>
+			</div>
+			
+			<div class="main1" id="main1">
+					<ul class="ul0">
+						<li id="all-teacher">全部学生</li>
+						<li id="jingyan">按经验排序</li>
+					</ul>	
+						<!--全部家教-->	
+					<div class="main1-allteacher">
+					<div class="teacher1">
+						<img src="images/head1.jpg" />
+						<button type="button"  id="bt1"><a href="choose_student.html">联系学生</a></button>
+						<ul class="ul1">
+							<li><a href="#">快速提高数学成绩&nbsp;&nbsp;&nbsp;王同学</a></li>
+							<li>在职教师</li>
+							<li>官方推荐</li>
+							<li>2017-6-5登陆</li>
+						</ul>
+						<ul class="ul2">
+							<li><span>受教科目：</span>初中</li>
+							<li><span>辅导地区:</span>王者区 &nbsp;砖石区 &nbsp;铂金区 &nbsp;黄金区&nbsp; 白银区&nbsp; 青铜区</li>
+							<li><span>个人简介:</span>王同学，初三，化学，数学成绩较低</li>
+						</ul>
+					</div>
+					<div class="teacher1-right">
+						<ul class="ul3">
+							<li><a href="#"><h4>热门大学家教</h4></a></li>
+							<li><a href="#">首都师范大学家教</a></li>
+							<li><a href="#">北京航空航天大学家教</a></li>
+							<li><a href="#">北京理工大学家教</a></li>
+							<li><a href="#">北京化工大学家教</a></li>
+							<li><a href="#">北京工业大学家教</a></li>
+							<li><a href="#">清华大学家教</a></li>
+							<li><a href="#">北京大学家教</a></li>
+							<li><a href="#">北京科技大学家教</a></li>							
+						</ul>
+					</div>
+					
+					<div class="teacher2">
+						<img src="images/head1.jpg" />
+						<button type="button"  id="bt2"><a href="choose_student.html">联系学生</a></button>
+						<ul class="ul1">
+							<li><a href="#">快速提高数学成绩&nbsp;&nbsp;&nbsp;王同学</a></li>
+							<li>在职教师</li>
+							<li>官方推荐</li>
+							<li>2017-6-5登陆</li>
+						</ul>
+						<ul class="ul2">
+							<li><span>受教科目：</span>初中</li>
+							<li><span>辅导地区:</span>王者区 &nbsp;砖石区 &nbsp;铂金区 &nbsp;黄金区&nbsp; 白银区&nbsp; 青铜区</li>
+							<li><span>个人简介:</span>王同学，初三，化学，数学成绩较低</li>
+						</ul>
+					</div>
+					
+					<div class="teacher2-right">
+						<ul class="ul3">
+							<li><a href="#"><h4>成功案例</h4></a></li>
+							<li><a href="#">张同学：南大附中周同学案例</a></li>
+							<li><a href="#">小平同学：金陵中学林教学案例</a></li>
+							<li><a href="#">Adel：新城中学唐同学教学案例</a></li>
+							<li><a href="#">豆腐同学：中国好同学</a></li>
+							<li><a href="#">贵荣同学：中国好同学</a></li>													
+						</ul>
+					</div>
+					
+					<div class="teacher3">
+						<img src="images/head1.jpg" />
+						<button type="button"  id="bt3"><a href="choose_student.html">联系学生</a></button>
+						<ul class="ul1">
+							<li><a href="#">快速提高数学成绩&nbsp;&nbsp;&nbsp;王同学</a></li>
+							<li>在职教师</li>
+							<li>官方推荐</li>
+							<li>2017-6-5登陆</li>
+						</ul>
+						<ul class="ul2">
+							<li><span>受教科目：</span>初中</li>
+							<li><span>辅导地区:</span>王者区 &nbsp;砖石区 &nbsp;铂金区 &nbsp;黄金区&nbsp; 白银区&nbsp; 青铜区</li>
+							<li><span>个人简介:</span>王同学，初三，化学，数学成绩较低</li>
+						</ul>
+					</div>
+					<div class="teacher3-right">
+						<ul class="ul3">
+							<li><a href="#"><h4>成功案例</h4></a></li>
+							<li><a href="#">张同学：南大附中周同学案例</a></li>
+							<li><a href="#">小平同学：金陵中学林教学案例</a></li>
+							<li><a href="#">Adel：新城中学唐同学教学案例</a></li>
+							<li><a href="#">豆腐同学：中国好同学</a></li>
+							<li><a href="#">贵荣同学：中国好同学</a></li>													
+						</ul>
+					</div>
+					<div class="teacher4">
+						<img src="images/head1.jpg" />
+						<button type="button"  id="bt4"><a href="choose_student.html">联系学生</a></button>
+						<ul class="ul1">
+							<li><a href="#">快速提高数学成绩&nbsp;&nbsp;&nbsp;王同学</a></li>
+							<li>在职教师</li>
+							<li>官方推荐</li>
+							<li>2017-6-5登陆</li>
+						</ul>
+						<ul class="ul2">
+							<li><span>受教科目：</span>初中</li>
+							<li><span>辅导地区:</span>王者区 &nbsp;砖石区 &nbsp;铂金区 &nbsp;黄金区&nbsp; 白银区&nbsp; 青铜区</li>
+							<li><span>个人简介:</span>王同学，初三，化学，数学成绩较低</li>
+						</ul>
+					</div>
+					<div class="teacher4-right">
+						<ul class="ul3">
+							<li><a href="#"><h4>成功案例</h4></a></li>
+							<li><a href="#">张同学：南大附中周同学案例</a></li>
+							<li><a href="#">小平同学：金陵中学林教学案例</a></li>
+							<li><a href="#">Adel：新城中学唐同学教学案例</a></li>
+							<li><a href="#">豆腐同学：中国好同学</a></li>
+							<li><a href="#">贵荣同学：中国好同学</a></li>													
+						</ul>
+					</div>
+					<div class="teacher5">
+						<img src="images/head1.jpg" />
+						<button type="button"  id="bt5"><a href="choose_student.html">联系学生</a></button>
+						<ul class="ul1">
+							<li><a href="#">快速提高数学成绩&nbsp;&nbsp;&nbsp;王同学</a></li>
+							<li>在职教师</li>
+							<li>官方推荐</li>
+							<li>2017-6-5登陆</li>
+						</ul>
+						<ul class="ul2">
+							<li><span>受教科目：</span>初中</li>
+							<li><span>辅导地区:</span>王者区 &nbsp;砖石区 &nbsp;铂金区 &nbsp;黄金区&nbsp; 白银区&nbsp; 青铜区</li>
+							<li><span>个人简介:</span>王同学，初三，化学，数学成绩较低</li>
+						</ul>
+					</div>
+					<div class="teacher5-right">
+						<ul class="ul3">
+							<li><a href="#"><h4>成功案例</h4></a></li>
+							<li><a href="#">张同学：南大附中周同学案例</a></li>
+							<li><a href="#">小平同学：金陵中学林教学案例</a></li>
+							<li><a href="#">Adel：新城中学唐同学教学案例</a></li>
+							<li><a href="#">豆腐同学：中国好同学</a></li>
+							<li><a href="#">贵荣同学：中国好同学</a></li>													
+						</ul>
+					</div>
+					</div>
+					
+					
+			<!--根据家教排行-->		
+			<div class="main1-allteacher">
+					<div class="teacher1">
+						<img src="images/head1.jpg" />
+						<button type="button"  id="bt1"><a href="choose_student.html">联系学生</a></button>
+						<ul class="ul1">
+							<li><a href="#">快速提高数学成绩&nbsp;&nbsp;&nbsp;王同学</a></li>
+							<li>在职教师</li>
+							<li>官方推荐</li>
+							<li>2017-6-5登陆</li>
+						</ul>
+						<ul class="ul2">
+							<li><span>受教科目：</span>初中</li>
+							<li><span>辅导地区:</span>王者区 &nbsp;砖石区 &nbsp;铂金区 &nbsp;黄金区&nbsp; 白银区&nbsp; 青铜区</li>
+							<li><span>个人简介:</span>王同学，初三，化学，数学成绩较低</li>
+						</ul>
+					</div>
+			</div>
+			
+		</div>
+		<div id="share">
+			<div class="left">
+				<div class="weixin"></div>
+				<div class="tengxun"></div>
+				<div class="xinlang"></div>
+			</div>
+			<div class="right"></div>
+		</div>
+		
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+		
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
+		<script>
+			var jingyan = document.getElementById("jingyan")
+			var allli = document.getElementById("all-teacher");
+			var allteacher=main1.getElementsByClassName("main1-allteacher")[0];
+			var orderteacher=main1.getElementsByClassName("main1-orderteacher")[0];
+			orderteacher.style.display="none";//默认情况下隐藏！
+				allli.onmouseover = function(){
+					allteacher.style.display="block";
+					orderteacher.style.display = "none";
+					jingyan.style.backgroundColor = "yellow";
+					allli.style.backgroundColor = "#11BB30";
+				}
+				
+				jingyan.onmouseover = function(){
+					allteacher.style.display = "none";
+					orderteacher.style.display = "block";
+					jingyan.style.backgroundColor = "#11BB30";
+					allli.style.backgroundColor = "yellow";
+				}
+		</script>
+	</body>
+</html>

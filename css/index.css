@@ -1,0 +1,282 @@
+.row{
+	width: 100%;
+	margin: 0;
+}
+#center{
+	margin-top: 55px;
+}
+#center .container{
+	position: relative;
+}
+#center .teacher_search{
+	padding: 30px;
+	position: absolute;
+	left: 40px;
+	top: 40px;
+	border-radius: 3px;
+	background: rgba(0,0,0,.2);
+}
+.col-xs-8{
+	padding-left: 0;
+}
+.col-xs-4{
+	padding-right: 0;
+}
+.teacher_search h4{
+	color: #222;
+	font-size: 17px;
+}
+.teacher_search select{
+	width: 200px;
+	margin: 10px 0;
+}
+#myCarousel{
+	width: 1000px;
+	height: 400px;
+}
+#myCarousel ol li{
+	opacity: .5;
+	background: #000;
+}
+.icon_left, .icon_right{
+	position: absolute;
+	top:190px;
+	font-size: 20px;
+	color: #000;
+}
+.icon_left{
+	left: 10px;
+}
+.icon_right{
+	right:10px
+}
+.case_title,.invite_title,.teachers_title{
+	width: 100%;
+	margin: 10px 0;
+	padding: 10px 0;
+	font-size: 18px;
+	/*border-bottom: 2px solid #11bb30;*/
+	background: -webkit-linear-gradient(bottom, #fff, #89EC9B);
+	background: -moz-linear-gradient(bottom, #fff, #89EC9B);
+	text-indent: 10px;
+}
+.case_left{
+	width: 66%;
+	height: 160px;
+	float:left;
+}
+.case_left img{
+	/*width: 263px;*/
+	vertical-align: top;
+}
+.case_left dl{
+	width: 253px;
+	margin-left:10px;
+	display: inline-block;
+}
+.case_left dl dt{
+	color: #0E9927;
+	/*line-height: 30px;*/
+	padding-bottom: 10px;
+	cursor: pointer;
+}
+.case_left dd{
+	line-height: 25px;
+	/*cursor: pointer;*/
+}
+.case_right{
+	width: 33%;
+	height: 160px;
+	padding: .5em;
+	float: right;
+	background: #eee;
+	text-align: center;
+}
+.case_right p{
+	line-height: 25px;
+}
+.case_right .contact_btn{
+	margin-top: 10px;
+}
+#notice_tabs{
+	/*height: 30px;*/
+	margin-top: 10px;
+	padding: 0;
+	background: -webkit-linear-gradient(bottom, #fff, #89EC9B);
+	background: -moz-linear-gradient(bottom, #fff, #89EC9B);
+}
+#notice_tabs > li.active > a, #notice_tabs > li.active > a:hover, #notice_tabs > li.active > a:focus{
+	border: 1px solid #11BB30;
+	border-bottom: none;
+}
+.notice_navbar li{
+	width:49%;
+	height: 45px;
+	line-height: 40px;
+	text-align: center;
+}
+.notice_navbar li a{
+	display: block;
+}
+.notice_content li{
+	cursor: pointer;
+}
+.notice_link{
+	
+}
+#notice_tabs{
+	
+}
+#tab1 ul,#tab2 ul{
+	padding: 10px;
+}
+#tab1 ul li,#tab2 ul li{
+	width: 100%;
+	line-height: 30px;
+}
+#tab1 ul li .time,#tab2 ul li .time{
+	float: right;
+}
+.invite .item{
+	display: inline-block;
+	width: 32%;
+	height: 200px;
+	position: relative;
+	text-align: center;
+	background: lightgoldenrodyellow;
+}
+.item .header{
+	height: 100px;
+	background: #eee;
+	/*padding-bottom: 50px;*/
+}
+.item .center{
+	position: absolute;
+	top: 70px;
+	left: 65px;
+	width: 60px;
+	height: 60px;
+	color: #fff;
+	border-radius: 50%;
+	display: table;
+}
+.item .center span{
+	vertical-align: middle;
+	display: table-cell;
+}
+.item .footer{
+	padding-top: 50px;
+	height: 50px;
+}
+.item .footer p{
+	display: block;
+}
+.item h4{
+	font-size: 17px;
+	color: #0E9927;
+	line-height: 40px;
+}
+.new_invite{
+	/*width:90%;*/
+	margin-top: 20px;
+	border: 2px solid #eee;
+	padding: 0;
+}
+.new_invite dl{
+	text-indent: 20px;
+	/*margin-right: 20px;*/
+}
+.new_invite dt{
+	line-height: 40px;
+	background: -webkit-linear-gradient(bottom, #fff, #89EC9B);
+	background: -moz-linear-gradient(bottom, #fff, #89EC9B);
+}
+.new_invite dd{
+	line-height: 30px;
+	cursor: pointer;
+	margin-right: 20px;
+}
+.new_invite dd .time{
+	float: right;
+}
+.new_invite_btn{
+	display: block;
+	margin: 10px auto;
+	background: #fff;
+	color: #0E9927;
+}
+.teachers_title{
+	display: inline-block;
+}
+.home_teachers{
+	margin-top: 10px;
+	position: relative;
+}
+.home_teachers .tab-content .col-xs-6{
+	padding: 0px;
+	border: 1px solid #11BB30;
+	border-radius: 3px;
+}
+.home_teachers .tab-content .teacher_details{
+	position: relative;
+}
+.triangle{
+	position: absolute;
+	top: 0;
+	right: 0;
+	width: 0;
+	height: 0;
+	border-top: 100px solid #8FEEA0;
+	border-left: 100px solid transparent;
+}
+.triangle img{
+	width: 25px;
+	height: 25px;
+	position: relative;
+	top: -80px;
+	right: 50px;
+}
+.teachers_navbar{
+	position: absolute;
+	top: 7px;
+	right: 0;
+}
+.teachers_navbar > li.active > a, .teachers_navbar > li.active > a:hover, .teachers_navbar > li.active > a:focus{
+	border: 1px solid #11BB30;
+	border-bottom: none;
+}
+.default_head img{
+	margin-top: 10px;
+	width: 100px;
+	height: 100px;
+	border-radius: 50%;
+	/*background: red;*/
+}
+.teacher_details .name{
+	color: #0E9927;
+	line-height: 40px;
+	cursor: pointer;
+}
+.teacher_details .style{
+	line-height: 40px;
+	cursor: pointer;
+}
+.teacher_details .price,.teacher_details .intro{
+	line-height: 30px;
+	color: #000;
+}
+.teacher_details .price span,.teacher_details .intro span{
+	color:rgba(0,0,0,.6);
+}
+.teacher_details .content_btn{
+	margin: 10px 0 20px 0;
+	background: #fff;
+	color: #0E9927;
+}
+
+
+
+.more{
+	color: #0E9927;
+	font-size: 14px;
+}

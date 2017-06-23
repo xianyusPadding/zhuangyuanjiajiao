@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title>预约老师</title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<!--<link rel="stylesheet" href="css/react.css" />-->
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" type="text/css" href="css/Chooseteacher.css"/>
+		<link rel="stylesheet" href="css/dateRange.css" />
+	</head>
+	<body>
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+							</div>
+						</span>
+						<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+						<span class="register"><a href="regist.html">注册</a></span>
+						<span class="login_in"><a href="login.html">登录</a></span>
+					</div>
+				</div>
+				<div class="row navbar-main">
+					<ul class="col-xs-9 list-inline">
+						<li class="active"><a href="index.html">首页</a></li>
+						<li><a href="teacher.html">教师库</a></li>
+						<!--<li><a href="#">学员库</a></li>-->
+						<li><a href="price.html">资费说明</a></li>
+						<li><a href="personal.html">个人中心</a></li>
+					</ul>
+					<div class="col-xs-3">
+						<div class="search input-group">
+							<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+							<input type="text" class="form-control" />
+							<span class="input-group-addon icon-search"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="area_modal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5>切换城市</h5>
+							</div>
+							<div class="modal-body">
+								<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+							        <option value="">省</option> 
+							    </select> 
+							    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+							        <option value="">市</option> 
+							    </select> 
+							    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+							</div>
+							<div class="modal-footer">
+								 <button class="btn btn-default area_submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div id="shopCar">
+			<div class="teacher_list">
+				<h4>预约老师</h4>
+			</div>
+			<table>
+				<tr>
+					<td><input type="checkbox" name="full_choose" onclick="choose_all(this)"/>全选</td>
+					<td> 老师信息</td>
+					<td> 单价/天</td>
+					<td> 预约</td>
+					<td> 押金</td>
+					<td> 操作</td>
+				</tr>
+				<tr class="list">
+					<td><input type="checkbox" name="each_choose" onclick="each_choose()"/></td>
+					<td>
+						<img src="img/xie.jpg"/>
+						<a href="#" class="chaoliagnjie" title="【谢老师】家教经验：10年以上	课时费：500元/天  教授科目： 高中数学">【谢老师】家教经验：10年以上	课时费：500元/天 教授科目： 高中数学</a>
+					</td>
+					<td class="chengse"> 500</td>
+					<td>
+						<div class="ta_date" id="div_date1">
+							<span class="date_title" id="date1"></span>
+						</div>
+					</td>
+					<td class="chengse"> 100 </td>
+					<td>
+						<a href="#">收藏该老师</a> <br />
+						<a href="#" onclick="_delete(this)">删除</a><br />
+						<a href="#">相关老师∨</a>
+					</td>
+				</tr>
+				<tr class="list">
+					<td><input type="checkbox" name="each_choose" onclick="each_choose()"/></td>
+					<td>
+						<img src="img/liufu.jpg"/>
+						<a href="#" class="chaoliagnjie" title="【刘付老师】家教经验： 5年	课时费：100元/天 可免费试讲  教授科目： 高中文科全科">【刘付老师】家教经验： 5年	课时费：100元/天 可免费试讲	教授科目： 高中文科全科</a>
+					</td>
+					<td class="chengse"> 200</td>
+					<td>		
+						<div class="ta_date" id="div_date2">
+							<span class="date_title" id="date2"></span>
+						</div>
+					</td>
+					<td class="chengse"> 100 </td>
+					<td>
+						<a href="#">收藏该老师</a> <br />
+						<a href="#" onclick="_delete(this)">删除</a><br />
+						<a href="#">相关老师∨</a>
+					</td>
+				</tr>
+				<tr class="list">
+					<td><input type="checkbox" name="each_choose" onclick="each_choose()"/></td>
+					<td>
+						<img src="img/xuefei.jpg"/>
+						<a href="#" class="chaoliagnjie" title="【梁老师】家教经验： 2年   课时费：100元/天 可免费试讲  教授科目： 初中语文、英语">【梁老师】家教经验： 2年	 课时费：100元/天 可免费试讲	教授科目： 初中语文、英语</a>
+					</td>
+					<td class="chengse"> 200</td>
+					<td>
+						<div class="ta_date" id="div_date3">
+							<span class="date_title" id="date3"></span>
+						</div>
+					</td>
+					<td class="chengse"> 100 </td>
+					<td>
+						<a href="#">收藏该老师</a> <br />
+						<a href="#" onclick="_delete(this)">删除</a><br />
+						<a href="#">相关老师∨</a>
+					</td>
+				</tr>
+			</table>
+			<div class="count">
+				<input type="checkbox" name="full_choose" onclick="choose_all(this)"/>全选
+				<a href="#" onclick="delete_all()">删除</a>
+				<span class="yixuan">已选老师：<span class="num" >0</span></span>
+				<span class="heji">合计：<span class="money" >0</span></span>
+				<button id="total_btn" class="jiesuan1" disabled="disabled">预约</button>
+			</div>
+		</div>
+		<div id="share">
+			<div class="left">
+				<div class="weixin"></div>
+				<div class="tengxun"></div>
+				<div class="xinlang"></div>
+			</div>
+			<div class="right"></div>
+		</div>
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+	</body>
+	<script type="text/javascript" src="js/jquery.js"></script>
+	<script type="text/javascript" src="js/bootstrap.js"></script>
+	<script type="text/javascript" src="js/base.js"></script>
+	<script type="text/javascript" src="js/area.js"></script>
+	<script type="text/javascript" src="js/dateRange.js"></script>
+	<script type="text/javascript" src="js/getAppointTime.js" ></script>
+	<script type="text/javascript" src="js/appointTeacher.js" ></script>
+</html>

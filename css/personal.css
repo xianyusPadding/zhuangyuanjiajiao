@@ -1,0 +1,242 @@
+*{
+	padding: 0;
+	margin: 0;
+}
+#center{
+	width: 1000px;
+	height: 1350px;
+	margin:0 auto;
+	margin-top: 100px;
+}
+.l_center{
+	width: 180px;
+	/*margin-left:100px ;*/
+	margin-top: -40px ;
+}
+.sider_top {
+	width: 180px;
+	height: 377px;
+}
+.title{
+	height: 28px;
+    border: 1px solid #badaa1;
+}
+.title h2{
+font-size: 14px;
+height: 26px;
+line-height: 4px;
+padding: 0 0 0 10px;
+color: #333;
+border: 1px solid #f5fcf3
+}
+.t_t{
+	display: block;
+font-size: 1.5em;
+-webkit-margin-before: 0.83em;
+-webkit-margin-after: 0.83em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+font-weight: bold;
+}
+.sider_top .t_detail{
+	background: #fafff8;
+    border: 1px solid #badaa1;
+    border-top: none;
+}
+ul{
+	list-style-type: none;
+}
+.user_m_t li{
+	height: 22px;
+     margin: 0 0 8px 0;
+     padding: 0 0 0 10px;
+}
+body{
+	font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+}
+a{
+	text-decoration: none;
+}
+.sider_main{
+	width: 180px;
+	height: 211px;
+}
+/*.sider_main .box1 {
+	background: #fafff8;
+    border: 1px solid #badaa1;
+    border-top: none;
+}*/
+/*.sider_main .title{
+	height: 28px;
+    border: 1px solid #badaa1;
+}*/
+/*.sider_main .box1 h2{
+font-size: 14px;
+height: 26px;
+line-height: 4px;
+padding: 0 0 0 10px;
+color: #333;
+border: 1px solid #f5fcf3
+}*/
+.detail{
+	width: 180px;
+	height: 197px;
+	
+}
+li {
+display: list-item;
+text-align: -webkit-match-parent;
+}
+.sider_bottom {
+	margin-top:20px;
+	width: 180px;
+	height: 197px;
+}
+ .box1 {
+	background: #fafff8;
+    border: 1px solid #badaa1;
+    border-top: none;
+    width: 180px;
+}
+.sider_bottom .box1{
+	width: 180px;
+	height: 195px;
+}
+#r_center{
+	width: 770px;
+	margin-left:234px ;
+	margin-top:-1360px ;
+	
+}
+.r_center .box2{
+	width: 770px;
+	height: 539px;
+}
+.box2 .t_detail{
+	background: #fff;
+border: 1px solid #badaa1;
+border-top: none;
+height: auto !important;
+height: 695px;
+overflow: visible;
+}
+.s_t{
+	margin: 5px 0;
+height: 28px;
+line-height: 28px;
+padding-left: 10px;
+color: #006600;
+border: #d0dde4 1px solid;
+background: #f4fbff;
+}
+.bg{
+	color: #FFFFFF;
+background-color: #88B3E2;
+height: 30px;
+width: 100px;
+text-align: center;
+line-height: 30px;
+float: left;
+}
+.red{
+	color: #439E8C;
+border: 1px solid #ccccc;
+height: 30px;
+width: 100px;
+text-align: center;
+line-height: 30px;
+float: left;
+}
+p{
+display: block;
+-webkit-margin-before: 1em;
+-webkit-margin-after: 1em;
+-webkit-margin-start: 0px;
+-webkit-margin-end: 0px;
+}
+.but{
+background-color: orange;
+color: #FFFFFF;
+height: 40px;
+line-height: 40px;
+text-align: center;
+width: 150px;
+}
+.but a{
+	color: #FFFFFF;
+}
+.select{
+	padding-top: 10px;
+height: 40px;
+margin: 8px 15px 5px 15px;
+}
+input{
+	font: 12px/1.5 tahoma, arial, \5b8b\4f53;
+	-webkit-rtl-ordering: logical;
+-webkit-user-select: text;
+color: initial;
+letter-spacing: normal;
+word-spacing: normal;
+text-transform: none;
+text-indent: 0px;
+text-shadow: none;
+display: inline-block;
+-webkit-writing-mode: horizontal-tb;
+}
+input[type="submit"]{
+	-webkit-align-items: flex-start;
+text-align: center;
+cursor: default;
+color: buttontext;
+padding: 2px 6px 3px;
+border: 2px outset buttonface;
+border-image-source: initial;
+border-image-slice: initial;
+border-image-width: initial;
+border-image-outset: initial;
+border-image-repeat: initial;
+background-color: buttonface;
+box-sizing: border-box;
+}
+input[type="submit"]{
+-webkit-appearance: push-button;
+white-space: pre;
+color: #006600;
+}
+tbody{
+	display: table-row-group;
+vertical-align: middle;
+border-color: inherit;
+}
+tr{
+	display: table-row;
+vertical-align: inherit;
+border-color: inherit;
+}
+th{
+	border: 1px solid #e3e3e3;
+background: #f2f2f2;
+color: #666;
+font-weight: normal;
+text-align: center;
+padding: 4px 0;
+display: table-cell;
+vertical-align: inherit;
+}
+td{
+	display: table-cell;
+   vertical-align: inherit;
+   text-align: center;
+}
+/*.sider_bottom .title{
+	height: 28px;
+    border: 1px solid #badaa1;
+}*/
+/*.sider_bottom .title h2{
+font-size: 14px;
+height: 26px;
+line-height: 4px;
+padding: 0 0 0 10px;
+color: #333;
+border: 1px solid #f5fcf3
+}*/

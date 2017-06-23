@@ -1,0 +1,890 @@
+*{
+	padding: 0;
+	margin: 0;
+	font-family: "微软雅黑";
+}
+ul{
+	list-style-type: none;
+}
+a{
+	text-decoration: none;
+}
+.main{
+	margin: 0 auto;
+	width: 1000px;
+	height: 1200px;
+	background-color: white;
+	margin-top: 60px;
+}
+.main .main1{
+	position: relative;
+}
+.main .menu{
+	height: 260px;
+	background-color: white;
+	border: 1px solid #11BB30;
+	border-radius: 3px;
+}
+.main .menu .one{
+	height: 90px;
+	color: white;
+	border-bottom: 1px solid yellowgreen;
+	padding: 5px 30px 0px 30px;
+	border-radius: 3px;
+}
+.main .menu .one dl{
+	height:80px;
+}
+.main .menu .one dl dt{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	color: #11BB30;
+}
+.main .menu .one dl dd{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-left: 15px;
+	font-size: 14px;
+	text-align: center;
+	color: #11BB30;
+}
+.main .menu .one dl dt:first-child{
+	
+}
+.main .menu .one dl dd:nth-child(15){
+   margin-left: 90px;	
+}
+.main .menu .one dl dd a{
+	color: #11BB30;
+}
+
+.main .menu .two{
+	color: white;
+	border-bottom: 1px solid yellowgreen;
+	padding: 0px 30px 0px 30px;
+	border-radius: 3px;
+}
+.main .menu .two dl{
+	height:45px;
+}
+.main .menu .two dl dt{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	color: #11BB30;
+}
+.main .menu .two dl dt:first-child{
+	
+}
+.main .menu .two dl dd{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-left: 15px;
+	font-size: 14px;
+	text-align: center;
+	color: #11BB30;
+}
+.main .menu .two dl dd a{
+	color: #11BB30;
+}
+.main .menu .three{
+	color: white;
+	border-bottom: 1px solid yellowgreen;
+	border-radius: 3px;
+	padding: 0px 30px 0px 30px;
+}
+.main .menu .three dl{
+	height:45px;
+}
+.main .menu .three dl dt{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	color: #11BB30;
+}
+.main .menu .three dl dt:first-child{
+	
+}
+.main .menu .three dl dd{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-left: 15px;
+	font-size: 14px;
+	text-align: center;
+	color: #11BB30;
+}
+.main .menu .three dl dd a{
+	color: #11BB30;
+}
+.main .menu .four{
+	color: white;
+	padding: 20px 30px 0px 30px;
+}
+.main .menu .four dl{
+	height:45px;
+}
+.main .menu .four dl dt{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	color: #11BB30;
+	
+}
+.main .menu .four dl dt:nth-child(2){
+	
+}
+.main .menu .four dl dd{
+	height: 40px;
+	line-height: 40px;
+	float: left;
+	margin-left: 15px;
+	font-size: 14px;
+	text-align: center;
+	color: #11BB30;
+}
+.main .menu .four dl dd a{
+	color: #11BB30;
+}
+.main .main1 .ul0{
+	width: 200px;
+	height: 50px;
+	margin-top: 20px;
+	margin-left: 0px;
+}
+.main .main1 .ul0 li{
+	width: 100px;
+	height: 50px;
+	background-color: yellow;
+	float: left;
+	text-align: center;
+	line-height: 60px;
+	border-radius: 3px;
+}
+.main .main1 .ul0 li:hover{
+	background-color: #11bb30;
+}
+.main .main1 .teacher1{
+	width:750px ;
+	height: 200px;
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+	position: relative;
+	border-radius: 3px;
+}
+.main .main1 .teacher1 img{
+	width: 130px;
+	height: 130px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: 0px solid red;
+	border-radius: 65px;
+}
+.main .main1 .teacher1 #bt1{
+	width: 100px;
+	height: 40px;
+	border: 1px solid greenyellow;
+	border-radius: 5px;
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+	background-color: whitesmoke;
+	border-radius: 3px;
+}
+.main .main1 .teacher1 #bt1:hover{
+	background-color: #11BB30;
+	color: red;
+}
+.main .main1 .teacher1 .ul1{
+	position: absolute;
+	left: 160px;
+	top: 0px;
+}
+.main .main1 .teacher1 .ul1 li{
+	float: left;
+	margin-left: 10px;
+	margin: 10px;
+}
+.main .main1 .teacher1 .ul1 li:nth-child(1){
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: white;
+}
+.main .main1 .teacher1 .ul1 li:nth-child(2){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #11BB30;
+	border-radius: 5px;
+	color: white;
+	background-color: #11BB30;
+}
+.main .main1 .teacher1 .ul1 li:nth-child(3){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid deepskyblue;
+	border-radius: 5px;
+	color: white;
+	background-color: deepskyblue;
+}
+.main .main1 .teacher1 .ul1 li:nth-child(4){
+	width:100px;
+	height: 10px;
+	margin-left: 480px;
+	margin-top: -40px;
+	color: lightslategray;
+}
+.main .main1 .teacher1 .ul1 li a{
+	color: #11BB30;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.main .main1 .teacher1 .ul1 li a:hover{
+	text-decoration: underline;
+}
+.main .main1 .teacher1 .ul2{
+	position: absolute;
+	left: 175px;
+	top: 40px;
+	
+}
+.main .main1 .teacher1 .ul2 li{
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
+.main .main1 .teacher1 .ul2 li span{
+	color: lightslategray;
+}
+.main .main1 .teacher1 .ul2 li span:nth-child(2){
+	margin-left: 30px;
+}
+.main .main1 .teacher1 .ul2 li img{
+	width: 10px;
+	height: 10px;
+}
+.main .main1 .teacher1 .ul2 li:nth-child(5) span{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.main .main1 .teacher1 .ul2 li:nth-child(5) span:nth-child(1){
+	margin: 0px;
+}
+.main .main1 .teacher1-right{
+	width: 248px;
+	height: 250px;
+	border: 1px solid darkgray;
+	position: absolute;
+	top: 0px;
+	right: 0px;
+	border-radius: 3px;
+}
+.main .main1 .teacher1-right .ul3{
+	
+}
+.main .main1 .teacher1-right .ul3 li{
+	width:248px;
+	height: 25px;
+	text-align: left;
+	line-height: 25px;
+	text-indent: 10px;//首行缩进
+}
+.main .main1 .teacher1-right .ul3 li:nth-child(1){
+	height: 50px;
+	line-height: 50px;
+	background-color: lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.main .main1 .teacher1-right .ul3 li a{
+	color: black;
+}
+.main .main1 .teacher1-right .ul3 li a:hover{
+	color: green;
+	text-decoration: underline;
+}
+
+/*//第二个老师*/
+
+.main .main1 .teacher2{
+	width: 750px;
+	height: 200px;
+	position: relative;
+	border-radius: 3px;
+	border-bottom: 1px solid red;
+}
+.main .main1 .teacher2 img{
+	width: 130px;
+	height: 130px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: 0px solid red;
+	border-radius: 65px;
+}
+.main .main1 .teacher2 #bt2{
+	width: 100px;
+	height: 40px;
+	border: 1px solid greenyellow;
+	border-radius: 5px;
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+	background-color: whitesmoke;
+}
+.main .main1 .teacher2 #bt2:hover{
+	background-color: #11BB30;
+	color: red;
+}
+.main .main1 .teacher2 .ul1{
+	position: absolute;
+	left: 160px;
+	top: 0px;
+}
+.main .main1 .teacher2 .ul1 li{
+	float: left;
+	margin-left: 10px;
+	margin: 10px;
+}
+.main .main1 .teacher2 .ul1 li:nth-child(1){
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: white;
+}
+.main .main1 .teacher2 .ul1 li:nth-child(2){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #11BB30;
+	border-radius: 5px;
+	color: white;
+	background-color: #11BB30;
+}
+.main .main1 .teacher2 .ul1 li:nth-child(3){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid deepskyblue;
+	border-radius: 5px;
+	color: white;
+	background-color: deepskyblue;
+}
+.main .main1 .teacher2 .ul1 li:nth-child(4){
+	width:100px;
+	height: 10px;
+	margin-left: 480px;
+	margin-top: -40px;
+	color: lightslategray;
+}
+.main .main1 .teacher2 .ul1 li a{
+	color: #11BB30;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.main .main1 .teacher2 .ul1 li a:hover{
+	text-decoration: underline;
+}
+.main .main1 .teacher2 .ul2{
+	position: absolute;
+	left: 175px;
+	top: 40px;
+	
+}
+.main .main1 .teacher2 .ul2 li{
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
+.main .main1 .teacher2 .ul2 li span{
+	color: lightslategray;
+}
+.main .main1 .teacher2 .ul2 li span:nth-child(2){
+	margin-left: 30px;
+}
+.main .main1 .teacher2 .ul2 li img{
+	width: 10px;
+	height: 10px;
+}
+.main .main1 .teacher2 .ul2 li:nth-child(5) span{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.main .main1 .teacher2 .ul2 li:nth-child(5) span:nth-child(1){
+	margin: 0px;
+}
+.main .main1 .teacher2-right{
+	width: 248px;
+	height: 200px;
+	border: 1px solid darkgray;
+	position: absolute;
+	top: 250px;
+	right: 0px;
+}
+.main .main1 .teacher2-right .ul3{
+	
+}
+.main .main1 .teacher2-right .ul3 li{
+	width:248px;
+	height: 25px;
+	text-align: left;
+	line-height: 25px;
+	text-indent: 10px;//首行缩进
+}
+.main .main1 .teacher2-right .ul3 li:nth-child(1){
+	height: 50px;
+	line-height: 50px;
+	background-color: lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.main .main1 .teacher2-right .ul3 li a{
+	color: black;
+}
+.main .main1 .teacher2-right .ul3 li a:hover{
+	color: green;
+	text-decoration: underline;
+}
+.main .main1 .teacher3{
+	width:750px ;
+	height: 200px;
+	border-topr: 1px solid red;
+	position: relative;
+	border-radius: 3px;
+}
+.main .main1 .teacher3 img{
+	width: 130px;
+	height: 130px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: 0px solid red;
+	border-radius: 65px;
+}
+.main .main1 .teacher3 #bt3{
+	width: 100px;
+	height: 40px;
+	border: 1px solid greenyellow;
+	border-radius: 5px;
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+	background-color: whitesmoke;
+}
+.main .main1 .teacher3 #bt3:hover{
+	background-color: #11BB30;
+	color: red;
+}
+
+.main .main1 .teacher3 .ul1{
+	position: absolute;
+	left: 160px;
+	top: 0px;
+}
+.main .main1 .teacher3 .ul1 li{
+	float: left;
+	margin-left: 10px;
+	margin: 10px;
+}
+.main .main1 .teacher3 .ul1 li:nth-child(1){
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: white;
+}
+.main .main1 .teacher3 .ul1 li:nth-child(2){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #11BB30;
+	border-radius: 5px;
+	color: white;
+	background-color: #11BB30;
+}
+.main .main1 .teacher3 .ul1 li:nth-child(3){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid deepskyblue;
+	border-radius: 5px;
+	color: white;
+	background-color: deepskyblue;
+}
+.main .main1 .teacher3 .ul1 li:nth-child(4){
+	width:100px;
+	height: 10px;
+	margin-left: 480px;
+	margin-top: -40px;
+	color: lightslategray;
+}
+.main .main1 .teacher3 .ul1 li a{
+	color: #11BB30;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.main .main1 .teacher3 .ul1 li a:hover{
+	text-decoration: underline;
+}
+.main .main1 .teacher3 .ul2{
+	position: absolute;
+	left: 175px;
+	top: 40px;
+	
+}
+.main .main1 .teacher3 .ul2 li{
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
+.main .main1 .teacher3 .ul2 li span{
+	color: lightslategray;
+}
+.main .main1 .teacher3 .ul2 li span:nth-child(2){
+	margin-left: 30px;
+}
+.main .main1 .teacher3 .ul2 li img{
+	width: 10px;
+	height: 10px;
+}
+.main .main1 .teacher3 .ul2 li:nth-child(5) span{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.main .main1 .teacher3 .ul2 li:nth-child(5) span:nth-child(1){
+	margin: 0px;
+}
+.main .main1 .teacher3-right{
+	width: 248px;
+	height: 200px;
+	border: 1px solid darkgray;
+	position: absolute;
+	top: 450px;
+	right: 0px;
+	border-radius: 3px;
+}
+.main .main1 .teacher3-right .ul3{
+	
+}
+.main .main1 .teacher3-right .ul3 li{
+	width:248px;
+	height: 25px;
+	text-align: left;
+	line-height: 25px;
+	text-indent: 10px;//首行缩进
+}
+.main .main1 .teacher3-right .ul3 li:nth-child(1){
+	height: 50px;
+	line-height: 50px;
+	background-color: lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.main .main1 .teacher3-right .ul3 li a{
+	color: black;
+}
+.main .main1 .teacher3-right .ul3 li a:hover{
+	color: green;
+	text-decoration: underline;
+}
+
+
+
+/*第四个老师*/
+
+.main .main1 .teacher4{
+	width:750px ;
+	height: 200px;
+	position: relative;
+	border-top: 1px solid red;
+	border-radius: 3px;
+}
+.main .main1 .teacher4 img{
+	width: 130px;
+	height: 130px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: 0px solid red;
+	border-radius: 65px;
+}
+.main .main1 .teacher4 #bt4{
+	width: 100px;
+	height: 40px;
+	border: 1px solid greenyellow;
+	border-radius: 5px;
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+	background-color: whitesmoke;
+}
+.main .main1 .teacher4 #bt4:hover{
+	background-color: #11BB30;
+	color: red;
+}
+
+.main .main1 .teacher4 .ul1{
+	position: absolute;
+	left: 160px;
+	top: 0px;
+}
+.main .main1 .teacher4 .ul1 li{
+	float: left;
+	margin-left: 10px;
+	margin: 10px;
+}
+.main .main1 .teacher4 .ul1 li:nth-child(1){
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: white;
+}
+.main .main1 .teacher4 .ul1 li:nth-child(2){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #11BB30;
+	border-radius: 5px;
+	color: white;
+	background-color: #11BB30;
+}
+.main .main1 .teacher4 .ul1 li:nth-child(3){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid deepskyblue;
+	border-radius: 5px;
+	color: white;
+	background-color: deepskyblue;
+}
+.main .main1 .teacher4 .ul1 li:nth-child(4){
+	width:100px;
+	height: 10px;
+	margin-left: 480px;
+	margin-top: -40px;
+	color: lightslategray;
+}
+.main .main1 .teacher4 .ul1 li a{
+	color: #11BB30;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.main .main1 .teacher4 .ul1 li a:hover{
+	text-decoration: underline;
+}
+.main .main1 .teacher4 .ul2{
+	position: absolute;
+	left: 175px;
+	top: 40px;	
+}
+.main .main1 .teacher4 .ul2 li{
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
+.main .main1 .teacher4 .ul2 li span{
+	color: lightslategray;
+}
+.main .main1 .teacher4 .ul2 li span:nth-child(2){
+	margin-left: 30px;
+}
+.main .main1 .teacher4 .ul2 li img{
+	width: 10px;
+	height: 10px;
+}
+.main .main1 .teacher4 .ul2 li:nth-child(5) span{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.main .main1 .teacher4 .ul2 li:nth-child(5) span:nth-child(1){
+	margin: 0px;
+}
+.main .main1 .teacher4-right{
+	width: 248px;
+	height: 200px;
+	border: 1px solid darkgray;
+	position: absolute;
+	top: 652px;
+	right: 0px;
+}
+.main .main1 .teacher4-right .ul3{
+	
+}
+.main .main1 .teacher4-right .ul3 li{
+	width:248px;
+	height: 25px;
+	text-align: left;
+	line-height: 25px;
+	text-indent: 10px;//首行缩进
+}
+.main .main1 .teacher4-right .ul3 li:nth-child(1){
+	height: 50px;
+	line-height: 50px;
+	background-color: lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.main .main1 .teacher4-right .ul3 li a{
+	color: black;
+}
+.main .main1 .teacher4-right .ul3 li a:hover{
+	color: green;
+	text-decoration: underline;
+}
+.main .main1 .teacher5{
+	width:750px ;
+	height: 200px;
+	position: relative;
+	border-top: 1px solid red;
+	border-bottom: 1px solid red;
+	border-radius: 3px;
+}
+.main .main1 .teacher5 img{
+	width: 130px;
+	height: 130px;
+	margin-top: 15px;
+	margin-left: 15px;
+	border: 0px solid red;
+	border-radius: 65px;
+}
+.main .main1 .teacher5 #bt5{
+	width: 100px;
+	height: 40px;
+	border: 1px solid greenyellow;
+	border-radius: 5px;
+	position: absolute;
+	left: 30px;
+	bottom: 10px;
+	background-color: whitesmoke;
+}
+.main .main1 .teacher5 #bt5:hover{
+	background-color: #11BB30;
+	color: red;
+}
+
+.main .main1 .teacher5 .ul1{
+	position: absolute;
+	left: 160px;
+	top: 0px;
+}
+.main .main1 .teacher5 .ul1 li{
+	float: left;
+	margin-left: 10px;
+	margin: 10px;
+}
+.main .main1 .teacher5 .ul1 li:nth-child(1){
+	width: 200px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	color: white;
+}
+.main .main1 .teacher5 .ul1 li:nth-child(2){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid #11BB30;
+	border-radius: 5px;
+	color: white;
+	background-color: #11BB30;
+}
+.main .main1 .teacher5 .ul1 li:nth-child(3){
+	width: 80px;
+	height: 25px;
+	line-height: 25px;
+	text-align: center;
+	border: 1px solid deepskyblue;
+	border-radius: 5px;
+	color: white;
+	background-color: deepskyblue;
+}
+.main .main1 .teacher5 .ul1 li:nth-child(4){
+	width:100px;
+	height: 10px;
+	margin-left: 480px;
+	margin-top: -40px;
+	color: lightslategray;
+}
+.main .main1 .teacher5 .ul1 li a{
+	color: #11BB30;
+	margin-top: 10px;
+	margin-left: 5px;
+}
+.main .main1 .teacher5 .ul1 li a:hover{
+	text-decoration: underline;
+}
+.main .main1 .teacher5 .ul2{
+	position: absolute;
+	left: 175px;
+	top: 40px;	
+}
+.main .main1 .teacher5 .ul2 li{
+	margin-top: 2.5px;
+	margin-bottom: 2.5px;
+}
+.main .main1 .teacher5 .ul2 li span{
+	color: lightslategray;
+}
+.main .main1 .teacher5 .ul2 li span:nth-child(2){
+	margin-left: 30px;
+}
+.main .main1 .teacher5 .ul2 li img{
+	width: 10px;
+	height: 10px;
+}
+.main .main1 .teacher5 .ul2 li:nth-child(5) span{
+	margin-left: 10px;
+	margin-right: 10px;
+}
+.main .main1 .teacher5 .ul2 li:nth-child(5) span:nth-child(1){
+	margin: 0px;
+}
+.main .main1 .teacher5-right{
+	width: 248px;
+	height: 200px;
+	border: 1px solid darkgray;
+	position: absolute;
+	top: 853px;
+	right: 0px;
+	border-radius: 3px;
+}
+.main .main1 .teacher5-right .ul3{
+	
+}
+.main .main1 .teacher5-right .ul3 li{
+	width:248px;
+	height: 25px;
+	text-align: left;
+	line-height: 25px;
+	text-indent: 10px;//首行缩进
+}
+.main .main1 .teacher5-right .ul3 li:nth-child(1){
+	height: 50px;
+	line-height: 50px;
+	background-color: lightgray;
+	border-bottom: 1px solid lightgray;
+}
+.main .main1 .teacher5-right .ul3 li a{
+	color: black;
+}
+.main .main1 .teacher5-right .ul3 li a:hover{
+	color: green;
+	text-decoration: underline;
+}
+.main .main1-orderteacher{
+	width: 1000px;
+	height: 1000px;
+	background-color: goldenrod;
+	display: none;
+}
+.main .main1-orderteacher img{
+	width: 1000px;
+	height: 500px;
+}
+

@@ -1,0 +1,209 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<link rel="stylesheet" href="css/react.css" />
+		<link rel="stylesheet" href="css/base.css" />
+		<link rel="stylesheet" href="css/teacher_list.css" />
+	</head>
+	<body>
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+							</div>
+						</span>
+						<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+						<span class="register"><a href="regist.html">注册</a></span>
+						<span class="login_in"><a href="login.html">登录</a></span>
+					</div>
+				</div>
+				<div class="row navbar-main">
+					<ul class="col-xs-9 list-inline">
+						<li class="active"><a href="index.html">首页</a></li>
+						<li><a href="teacher.html">教师库</a></li>
+						<li><a href="student.html">学员库</a></li>
+						<li><a href="price.html">资费说明</a></li>
+						<li><a href="personal.html">个人中心</a></li>
+					</ul>
+					<div class="col-xs-3">
+						<div class="search input-group">
+							<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+							<input type="text" class="form-control" />
+							<span class="input-group-addon icon-search"></span>
+						</div>
+					</div>
+				</div>
+				<div class="modal" id="area_modal">
+					<div class="modal-dialog">
+						<div class="modal-content">
+							<div class="modal-header">
+								<h5>切换城市</h5>
+							</div>
+							<div class="modal-body">
+								<select id="seleProvince" class="form-control" onchange="getCity(this.value)"> 
+							        <option value="">省</option> 
+							    </select> 
+							    <select id="seleCity" class="form-control" onchange="getCounty(this.value)"> 
+							        <option value="">市</option> 
+							    </select> 
+							    <!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+							</div>
+							<div class="modal-footer">
+								 <button class="btn btn-default area_submitBtn">确定</button>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		
+		<div id="banner">
+			<div class="banner-left">
+				<img  class="teacher" src="img/teacher.jpg"/>
+			</div>
+			<div class="banner-right">
+				<div>
+					<p><b>刘付老师	编号：T366129</b></p><span>预约一般</span>
+				</div>
+				<p>刘付老师，在职中学数学教师，大学就读于数学系，有扎实的数学功底。辅导学生，教学风格严格认真，善于针对学...</p>
+			</div>
+			<div class="banner-bottom-left">
+				<div>已完成两份授课报告</div>
+				<ul>
+					<li>
+						4<br />
+						累计学时
+					</li>
+					<li>
+						<span class="fenge"></span>
+					</li>
+					<li>
+						1<br />
+						学生数
+					</li>
+					<li>
+						<span class="class="fenge"></span>
+					</li>
+					<li>
+						100%<br />
+						满意度
+					</li>
+				</ul>
+			</div>
+			<div class="banner-bottom-right">
+				<p>教师类型：大学生</p>
+				<p>毕业学校：上海师范大学</p>
+				<p>所获证书：上海师范大学专业奖学金，大学英语四六级，美国大学生数模竞赛三等奖，全国计算机二级</p>
+				<a href="#">+加入备选老师</a><span>客服 021-61300114</span>
+			</div>
+		</div>
+		<div id="detail-tab">
+			<ul class="navbar">
+				<li class="item"><a href="#tab1">详细信息</a></li>
+				<li class="item"><a href="#tab2">教学案例</a></li>
+				<li class="item"><a href="#tab3">成功记录</a></li>
+				<li class="item"><a href="#tab4">教师风采</a></li>
+			</ul>
+			<div class="tab" id="tab1">
+				<h4><img src="img/icon_teacher.png"/>详细信息</h4>
+				<div>
+					<p>可授科目：</p>
+					    <span>初三数学&nbsp;&nbsp;初一初二数学</span>
+					<p>授课区域：</p>
+					    <span>徐汇(漕河泾,龙华,漕溪新村,田林,康健,宛南,内环以内) 闵行(浦江) 长宁(内环以内) 静安(静安) 卢湾(淮海路,徐家汇路以北,五里桥,建国路,打浦桥,复兴路,徐家汇路以南,鲁班路) 浦东(上南,世纪公园,德州,洋泾,昌里,罗山,塘桥,临沂,杨思,张江,孙桥,陆家嘴,上钢,花木,齐河,金杨,黄山,南码头,三林,东明路,北蔡) 黄浦(豫园,延安路以北,老西门,延安路以南,十六铺,外摊,人民广场,董家渡,南京路,斜桥,外滩,蓬莱公园) </span>
+					<p>薪水要求：</p>
+					    <span>执行家教114薪水标准  查看家教114薪水标准<a href="#">？查看家教114薪水标准</a></span>
+					<p>所获证书：</p>
+					    <span>上海师范大学专业奖学金，大学英语四六级，美国大学生数模竞赛三等奖，全国计算机二级</span>
+					<p>自我评价：</p>
+					    <span>刘付老师，在职中学数学教师，大学就读于数学系，有扎实的数学功底。辅导学生，教学风格严格认真，善于针对学生知识薄弱环节进行提高，曾经帮助一名成绩突然下滑的学生在半学期内从班级倒数第二上升到第十五名。同时重视激励学生，培养学生自信，激发学生学习兴趣，帮助学生从学习中获得成就感。</span>
+				</div>
+			</div>
+			<div class="tab" id="tab2">
+				<h4><img src="img/icon_anli.png"/>教学案例</h4>
+				<div><p>无</p></div>
+			</div>
+			<div class="tab" id="tab3">
+				<h4><img src="img/icon_jilu.png"/>成功记录</h4>
+				<div>
+					<table>
+						<tr>
+							<td>订单号</td>
+							<td>年级科目</td>
+							<td>状态</td>
+							<td>接单日期</td>
+						</tr>
+						<tr>
+							<td>80179</td>
+							<td>初三数学</td>
+							<td>成功</td>
+							<td>2017-06-02</td>							
+						</tr>
+					</table>
+				</div>
+				<hr />
+			</div>
+			<div class="tab" id="tab4">
+				<h4><img src="img/icon_teach.png"/>教师风采</h4>
+				<div>
+					<img src="img/fengcai1.PNG" />
+					<img src="img/fengcai1.PNG" />
+					<img src="img/fengcai1.PNG" />
+				</div>
+			</div>
+			<div class="teach-form" >
+				<h4>预约老师<i>(编号：T366326)</i></h4>
+				<form action="choose_teacher.html" method="" onsubmit="">
+					<div class="fg">
+						<label for="">联系人</label>
+						<input type="text" />
+					</div>
+					<div class="fg">
+						<label for="">联系方式</label>
+						<input type="text" />
+					</div>
+					<div class="fg">
+						<label for="">科目</label>
+						<input type="text" />
+					</div>
+					<button type="submit" >立即预约</button>
+				</form>
+			</div>
+		</div>
+		
+		<div id="share">
+			<div class="left">
+				<div class="weixin"></div>
+				<div class="tengxun"></div>
+				<div class="xinlang"></div>
+			</div>
+			<div class="right"></div>
+		</div>
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center"><a href="">关于我们</a> | <a href="">联系我们</a> | <a href="">使用协议</a> | <a href="">状元家教网</a> | <a href="">诚征英才</a>| <a href="">学科</a></p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
+	</body>
+</html>

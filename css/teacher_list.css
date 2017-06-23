@@ -1,0 +1,255 @@
+
+/*全局样式开始*/*{
+	margin: 0;
+	padding: 0;
+}
+body{
+	font-family: "微软雅黑";
+}
+ul{
+	list-style-type: none;
+}
+/*全局样式结束*/
+#banner{
+	width: 1000px;
+	height: 428px;
+	background: url(../img/ibanner_bg.png);
+	position: relative;
+	margin: 0 auto;
+	margin-top: 60px;
+}
+#banner .teacher{
+	width: 120px;
+	height: 120px;
+	position: absolute;
+	border-radius: 50%;
+	top: 10%;
+	left: 50px;
+}
+#banner .banner-right{
+	position: absolute;
+	width: 594px;
+	top: 10%;
+	left: 200px;
+}
+.banner-right p{
+	margin: 5px;
+}
+.banner-right p:first-child{
+	display: inline-block;
+	font-size: 22px;
+	font-f;
+}
+.banner-right span{
+	margin-left: 32px;
+	background-color: forestgreen;
+	color: white;
+}
+
+/*.banner-bottom-left开始*/
+#banner .banner-bottom-left{
+	position: absolute;
+	width: 300px;
+	top: 45%;
+	margin-left: 5%;
+}
+.banner-bottom-left div{
+	height: 32px;
+	line-height: 32px;
+	width: 58%;
+	text-align: center;
+	background-color: #11BB30;
+	color: white;
+	border: 5px;
+}
+.banner-bottom-left ul {
+	margin-top: 10%;
+}
+.banner-bottom-left ul li{
+	font-size: 13px;
+	padding: 0px 8px;
+	text-align: center;
+	float: left;
+}
+.banner-bottom-left ul li span{
+	border-left: 1px solid #11BB30;
+}
+
+/*.banner-bottom-left开始*/
+
+/*.banner-bottom-right开始*/
+#banner .banner-bottom-right{
+	position: absolute;
+	width: 350px;
+	top: 50%;
+	left: 380px;
+}
+.banner-bottom-right p{
+	margin: 5px;
+}
+.banner-bottom-right a{
+	background-color: #11BB30;
+	display: inline-block;
+	color: white;
+	text-decoration: none;
+	width: 138px;
+	text-align: center;
+	height: 32px;
+	line-height: 32px;
+	border-radius: 5px;
+}
+.banner-bottom-right span{
+	color: forestgreen;
+}
+/*.banner-bottom-right结束*/
+
+
+/*teach-form开始*/
+.teach-form{
+	width: 275px;
+	background-color: white;
+	opacity: 0.8;
+	position: fixed;
+	right: 5%;
+	top: 300px;
+	border: 1px solid #eee;
+	z-index: 999;
+}
+.teach-form h4{
+	color: #666;
+	border-bottom: 1px solid #eee;
+	font-weight: normal;
+	font-size: 16px;
+	font-family: "Microsoft YaHei";
+	padding-left: 15px;
+	height: 43px;
+	line-height: 41px;
+}
+.teach-form form {
+	border-top: none;
+	padding: 15px 26px 20px 15px;
+	background: #fff;
+	overflow: inherit;
+}
+.teach-form .fg {
+	margin-bottom: 10px;
+}
+.teach-form form label {
+	display: block;
+	margin-bottom: 5px;
+	color: #888;
+}
+.teach-form input {
+	width: 100%;
+	border: 1px solid #eee;
+	outline: none;
+	height: 35px;
+	line-height: 33px;
+	color: #888;
+	padding-left: 10px;
+	font-family: "Microsoft YaHei";
+}
+.teach-form button {
+	background: #50c645;
+	color: #fff;
+	font-size: 17px;
+	border: 1px solid #50c645;
+	cursor: pointer;
+	-moz-transition: .3s;
+	-webkit-transition: .3s;
+	width: 100%;
+	height: 45px;
+	line-height: 43px;
+	margin-top: 10px;
+	font-family: "Microsoft YaHei";
+}
+.teach-form button:hover {
+	background: #50c600;
+}
+/*teach-form结束*/
+
+/*detail-tab开始*/
+#detail-tab{
+	width: 1000px;
+	margin: 0 auto;
+	border: 1px solid #eee;
+}
+
+#detail-tab .navbar{
+	list-style-type: none;
+	width: 1000px;
+	height: 55px;
+	background: white;
+	border-radius: 3px;
+}
+#detail-tab .navbar li{
+	width: 247px;
+	height: 50px;
+	line-height: 50px;
+	text-align: center;
+	float: left;
+	border: 1px solid #eee;
+}
+#detail-tab .navbar li:first-child{
+	border-top: 3px solid #11BB30;
+	border-bottom: none;
+	width: 251px;
+}
+#detail-tab .navbar li a{
+	text-decoration: none;
+	font-size: 16px;
+	color: black;
+}
+#tab .navbar li a:hover{
+	background: #258dcd;
+	color: #fff;
+}
+.tab{
+	border-bottom: #eee;
+}
+.tab h4{
+	height: 45px;
+	line-height: 45px;
+	margin-top: 25px;
+	color: #11BB30;
+	border-bottom: 1px solid #eee;;
+}
+.tab h4 img{
+	margin-left: 12px;
+	margin-right: 12px;
+}
+.tab div {
+	margin-left: 4%;
+}
+.tab div table{
+	width: 100%;
+}
+.tab hr{
+	height:1px;
+	border:none;
+	border-top:1px dotted #eee;
+}
+.tab div p,.tab div span{
+	line-height: 20px;
+	padding: 5px 0px;
+	color: green;
+}
+.tab div span{
+	text-indent: 2em;
+	display: inline-block;
+	color: #000000;
+}
+
+.tab div a{
+	color: gray;
+}
+.tab div img{
+	width: 100px;
+	height: 100px;
+	margin: 15px 50px 15px 5px;
+	border-radius: 100px;
+	/*margin-top: 15px;
+	margin-right:50px ;*/
+}
+
+/*detail-tab结束*/

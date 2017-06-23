@@ -1,0 +1,301 @@
+<!DOCTYPE html>
+<html>
+
+	<head>
+		<meta charset="utf-8" />
+		<title></title>
+		<link rel="stylesheet" href="css/bootstrap.css" />
+		<link rel="stylesheet" href="css/font-awesome.css" />
+		<link rel="stylesheet" href="css/react.css" />
+		<link rel="stylesheet" href="css/personal.css" />
+		<link rel="stylesheet" href="css/base.css" />
+	</head>
+
+	<body>
+		<div id="header" class="">
+			<div class="container">
+				<div class="row">
+					<div class="navbar-header">
+						<span class="logo">
+							<img src="images/logo1.png" alt="" />
+							<div class="title" style="border:none">
+								<h1>状元家教</h1>
+								<span>ZYJJ.COM</span>
+					</div>
+					</span>
+					<span class="address" data-toggle="modal" data-target="#area_modal">切换城市：<span id="address">湛江市</span>></span>
+					<span class="register"><a href="regist.html">注册</a></span>
+					<span class="login_in"><a href="login.html">登录</a></span>
+				</div>
+			</div>
+			<div class="row navbar-main">
+				<ul class="col-xs-9 list-inline">
+					<li>
+						<a href="index.html">首页</a>
+					</li>
+					<li><a href="teacher.html">教师库</a></li>
+					<li><a href="student.html">学员库</a></li>
+					<li><a href="price.html">资费说明</a></li>
+					<li class="active"><a href="personal.html">个人中心</a></li>
+				</ul>
+				<div class="col-xs-3">
+					<div class="search input-group">
+						<span class="input-group-addon fl-padding">
+								<select name="" class="search_select">
+									<option value="">家教</option>
+									<option value="">家长</option>
+								</select>
+							</span>
+						<input type="text" class="form-control" />
+						<span class="input-group-addon icon-search"></span>
+					</div>
+				</div>
+			</div>
+			<div class="modal" id="area_modal">
+				<div class="modal-dialog">
+					<div class="modal-content">
+						<div class="modal-header">
+							<h5>切换城市</h5>
+						</div>
+						<div class="modal-body">
+							<select id="seleProvince" class="form-control" onchange="getCity(this.value)">
+								<option value="">省</option>
+							</select>
+							<select id="seleCity" class="form-control" onchange="getCounty(this.value)">
+								<option value="">市</option>
+							</select>
+							<!--<select id="seleCounty" class="form-control" onchange="setCountyCode(this.value)"> 
+							        <option value="">县</option>
+							    </select>-->
+						</div>
+						<div class="modal-footer">
+							<button class="btn btn-default area_submitBtn">确定</button>
+						</div>
+					</div>
+				</div>
+			</div>
+		</div>
+		</div>
+		<div id="center">
+			<div class="l_center">
+				<div class="sider_top">
+					<div class="title">
+						<h2 class="t_t">我的家教网导航</h2>
+					</div>
+					<div class="t_detail">
+						<ul class="user_m_t">
+							<li>
+								<a href="#">成为付费会员</a><span style="color: red;;font-size: 10px;display: inline;">&nbsp;&nbsp;&nbsp;new!</span></li>
+							<li>
+								<a href="#">邀请好友</a>
+							</li>
+							<li>
+								<a href="#">修改密码</a>
+							</li>
+							<li>
+								<a href="#">修改手机</a>
+							</li>
+							<li>
+								<a href="#">在线咨询</a>
+							</li>
+							<li>
+								<a href="#">购买积分</a>
+							</li>
+							<li>
+								<a href="#">设置手机是否公开</a>
+							</li>
+							<li>
+								<a href="#">我的订单</a>
+							</li>
+							<li>
+								<a href="#">我的钱包</a>
+							</li>
+							<li>
+								<a href="#">提醒您找家教防诈骗</a>
+							</li>
+						</ul>
+					</div>
+				</div>
+				<div class="sider_main">
+					<div class="box1">
+						<div class="title">
+							<h2 class="t_t">我的找家教情况</h2>
+						</div>
+						<div class="drtail">
+							<ul class="user_m_t">
+								<li>
+									<a href="#">发布找家教信息</a>
+								</li>
+								<li>
+									<a href="#">我查看的家教</a>
+								</li>
+								<li>
+									<a href="#">我收藏的家教</a>
+								</li>
+								<li>
+									<a href="#">发布家教点评</a>
+								</li>
+								<li>
+									<a href="#">我浏览过的家教</a>
+								</li>
+								<li>
+									<a href="#">预约我的家教</a>
+								</li>
+							</ul>
+						</div>
+					</div>
+				</div>
+				<div class="sider_bottom">
+					<div class="box1">
+						<div class="title">
+							<h2 class="t_t">我的基本信息</h2>
+						</div>
+						<ul class="user_m_t">
+							<li>ID:168251</li>
+							<li>区&nbsp;&nbsp;域：东城区</li>
+							<li>详细地址：湛江 </li>
+							<li>共发布信息数：1</li>
+							<li>如需修改信息请联系客服</li>
+						</ul>
+					</div>
+				</div>
+				<div class="box1">
+					<div class="title">
+						<h2 class="t_t">小提示</h2>
+					</div>
+					<ul class="user_m_t">
+						<p>家长优先联系已认证及家教</p>
+						<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+						<p>家教经验指数代表成功授课几次</p>
+						<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+						<p>家长可提醒家教上门携带证件</p>
+						<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+						<p>家长可与家教直接商议价格</p>
+						<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+						<p>家长可与家教签订协议</p>
+						<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+						<p>状元家教客服电话均来自湛江，并和您核对ID，如有冒充状元客服电话，请家长注意！</p>
+						<hr style="height:1px;border:none;border-top:1px dashed #0066CC;" />
+					</ul>
+				</div>
+
+				<div class="box1">
+					<div class="title">
+						<h2 class="t_t">教育资源频道</h2>
+					</div>
+					<div clas="detail">
+						<ul class="user_m_t">
+							<li>
+								<div>
+									<a style="display: inline;padding-left: 6px;" href="#">我的资源</a>
+									<a href="#" style="color: #666666;display: inline;">上传资料</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a style="display: inline;padding-left: 6px;" href="#">下载统计</a>
+								</div>
+							</li>
+							<li>
+								<div>
+									<a style="display: inline;padding-left: 6px;" href="#">热门资源</a>
+								</div>
+							</li>
+						</ul>
+					</div>
+				</div>
+			</div>
+			<div id="r_center">
+				<div class="box2">
+					<div class="title">
+						<h2 class="t_t">个人中心</h2>
+					</div>
+					<div class="t_detail1">
+						<h3 class="s_t">积分奖励</h3>
+						<p style="padding: 0px 15px 5px 15px;">
+							积分规则：（每查看1个家教消耗5积分。推荐查看登录信息为近期的家教
+						</p>
+						<h3 class="s_t">招聘信息</h3>
+						<div class="select" id="info">
+							<div class="bg" onclick="showinfos(1);" id="openinfo">我发布的信息</div>
+							<div class="red" style="cursor:pointer;" onclick="showinfos(2);" id="closeinfo">已关闭信息</div>
+						</div>
+						<div class="kinfo" style="margin-top: 5px;padding: 0px 15px 5px;display: block;">
+							<p>您还没有发布信息</p>
+						</div>
+						<div class="binfo" style="margin-top: 5px;padding: 0px 15px 5px;display: none;">
+							<table width="100%" border="0" cellspacing="0" cellpadding="0" class="table_result" style="margin-top: 5px;">
+								<tbody>
+									<tr>
+										<th>编号</th>
+										<th>科目</th>
+										<th>详细描述</th>
+										<th>状态</th>
+										<th>添加时间</th>
+										<th>操作</th>
+									</tr>
+									<tr>
+										<th>227959</th>
+										<td>高考化学</td>
+										<td></td>
+										<td>已关闭</td>
+										<td>2017-06-09 09:45</td>
+										<td>
+											<a href="#" class="blue">查看补充</a>
+										</td>
+									</tr>
+								</tbody>
+							</table>
+						</div>
+						<div>
+							<center class="sentm">
+								<button class="but"><a href="post_teacher_msg.html">点击发布新的家教信息</a></button>
+								<button class="but"><a href="view_teacher.html">点击查看更多家教</a></button>
+							</center>
+						</div>
+						<h3 class="s_t">积分明细</h3>
+						<div class="t_1"></div>
+						<h3 class="s_t">快速查找</h3>
+						<form action="#" method="post" target="_blank">
+							<div class="select">
+								快速查找：
+								<input type="text" id="telephone" name="telephone" style="padding: 3px;color: #919B97;width: 150px;border: 1px solid #ccc8c8;" value="输入家教手机或ID" />
+								<input type="submit" id="s_submit" class="index_s" value="搜索" />
+							</div>
+						</form>
+					</div>
+				</div>
+			</div>
+		</div>
+
+		</div>
+		<div id="share">
+			<div class="left">
+				<div class="weixin"></div>
+				<div class="tengxun"></div>
+				<div class="xinlang"></div>
+			</div>
+			<div class="right"></div>
+		</div>
+
+		<div id="footer">
+			<div class="container text-muted">
+				<p style="text-align: center">
+					<a href="">关于我们</a> |
+					<a href="">联系我们</a> |
+					<a href="">使用协议</a> |
+					<a href="">状元家教网</a> |
+					<a href="">诚征英才</a>|
+					<a href="">学科</a>
+				</p>
+				<p style="text-align: center">©2016-2017 状元家教官方网站All Right Reserved 联系我们：zhuangyujiajiao@163.com</p>
+			</div>
+		</div>
+		<script type="text/javascript" src="js/jquery.js"></script>
+		<script type="text/javascript" src="js/bootstrap.js"></script>
+		<script type="text/javascript" src="js/base.js"></script>
+		<script type="text/javascript" src="js/area.js"></script>
+		<script type="text/javascript" src="js/select.js"></script>
+	</body>
+
+</html>
