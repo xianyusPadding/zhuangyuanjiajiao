@@ -1,11 +1,28 @@
-### zhuangyuanjiajiao
-	this is a university practical training and static website
-	finished by feilong, xuefei, minghao, jiemin, guanfu
-
-#### content's images:
-##### rendering1.jpg
+### 状元家教
+---
+> 该项目是大三实训时，团队合作写的
+---
+#### 设计：
+1. 布局主要是参照各类家教网给的灵感设计的，因为本人并无什么设计功力。
+2. 在颜色上主要采用了#bb1130(绿色)和白色的搭配，也混合了一些其他颜色。
+---
+##### 预览：
 ![](https://github.com/xianyusPadding/zhuangyuanjiajiao/blob/master/images/rendering1.jpg)
-##### rendering2.jpg
+---
 ![](https://github.com/xianyusPadding/zhuangyuanjiajiao/blob/master/images/rendering2.jpg)
-##### rendering3.jpg
+---
 ![](https://github.com/xianyusPadding/zhuangyuanjiajiao/blob/master/images/rendering3.jpg)
+---
+#### 技术栈：
+bootstrap,jquery,html5,css3
+---
+#### 功能点：
+二级省市联动
+二级家教速查联动
+登录注册
+轮播图
+选择教师、学员
+查看教师、学员信息
+---
+#### 运行方法：
+纯前端项目，点击index.html即可
